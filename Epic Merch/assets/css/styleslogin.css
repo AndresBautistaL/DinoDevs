@@ -1,0 +1,86 @@
+/* fuente importadas Chakra para titulos y Barlow para textos */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap');
+
+/* color de fondo */
+body {
+  background-image: linear-gradient(#C3083F, #130B1A 25%);
+  background-attachment: fixed;
+  }
+
+/* estilos navbar */
+.navbar {
+  background: rgba(40, 28, 56, 0.8);
+  color: white;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* estilos footer */
+.footer {
+  background: rgba(40, 28, 56, 0.8);
+  color: white;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.footer-redes {
+  list-style-type: none;
+  align-items: center;
+}
+
+/* estilos main login*/
+main{
+  justify-content: center;
+}
+.containerLogin {
+  background-color: #281C38;
+  width: 50rem;
+  padding: 1rem 0rem;
+  border-radius: 1%;
+  /* opacity: 80%; */
+  /* ACTIVAR SOLO SI ES ESTRICTAMENTE NECESARIO PARA EL DISEÑO YA QUE AFECTA A TODO DENTRO EL CONTAINER */
+}
+/* texto "¿listos a jugar?" */
+.titulo1 {
+  font-family: 'Chakra Petch', sans-serif;
+  color: #C3083F;
+}
+/* linea de color blanco debajo de la frase "¿listo para jugar?" */
+.linea{
+  background-color: white;
+  width: 43rem;
+  height: 2px;
+}
+/* texto "inicia sesión" */
+.titulo2 {
+  font-family: 'Chakra Petch', sans-serif;
+}
+/* iconos de redes sociales para iniciar sesión */
+.iconosIn{
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+/* textos que son hipervinculos para reset de contraseña y registro */
+.textoVinculo {
+  color: #C3083F;
+}
+/* boton de ingresar */
+.btnIn {
+  font-family: 'Chakra Petch', sans-serif;
+  background-color: #C3083F;
+  color: white;
+  border-color: #C3083F;
+  margin: 2rem 44%;
+  border-radius: 5%;
+}
+/* etiquetas de texto para señalar lo que se tiene que ingresar en el formato */
+.form-label {
+  font-family: 'Barlow', sans-serif;
+}
+/* espacios del formato donde el usuario ingresa texto */
+.form-control {
+  background-color: #7C629F;
+  border-color: #7C629F;
+  height: 3rem;
+  width: 25rem;
+  margin: auto;
+}
