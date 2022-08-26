@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap');
+
+body{
+    background-image: linear-gradient(#C3083F, #130B1A 25%);
+    background-attachment: fixed; 
+    ;
+}
+.navbar{
+    background: rgba(40, 28, 56, 0.8);
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.parrafo{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.añadirpro{color: white;
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+
+
+
+.footer{
+    background: rgba(40, 28, 56, 0.8);
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.footer-redes{
+    list-style-type: none;
+    align-items: center;
+   
+}
+
