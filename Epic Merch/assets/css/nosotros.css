@@ -11,16 +11,16 @@ body{
     font-family: 'Chakra Petch',sans-serif;
 }
 
-.footer{
+footer.footer { 
     background: rgba(40, 28, 56, 0.8);
     color: white;
-    font-family: 'Chakra Petch',sans-serif;
-}
-
-.footer-redes{
+    font-size:small;
+    font-family: "Chakra Petch", sans-serif;
+  }
+  
+  .footer-redes{
     list-style-type: none;
-    align-items: center;
-}
+  }
 
 .text{
     padding-top: 1rem;

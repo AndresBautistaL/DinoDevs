@@ -5,7 +5,6 @@
 body {
   background-image: linear-gradient(#C3083F, #130B1A 25%);
   background-attachment: fixed;
-  ;
 }
 
 /* estilos navbar */
@@ -16,16 +15,18 @@ body {
 }
 
 /* estilos footer */
-.footer {
-  background: rgba(40, 28, 56, 0.8);
-  color: white;
-  font-family: 'Chakra Petch', sans-serif;
-}
 
-.footer-redes {
-  list-style-type: none;
-  align-items: center;
-}
+footer.footer { 
+    background: rgba(40, 28, 56, 0.8);
+    color: white;
+    font-size:small;
+    font-family: "Chakra Petch", sans-serif;
+  }
+  
+  .footer-redes{
+    list-style-type: none;
+  }
+
 
 /* estilos main login*/
 main{
@@ -86,6 +87,10 @@ main{
   margin: 2rem 44%;
   border-radius: 5%;
 }
+  .btnReg:hover{
+    background-color: #d64671;
+    box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+    }
 .login{
   padding: 0rem 10rem;
   margin-left: 26px;
