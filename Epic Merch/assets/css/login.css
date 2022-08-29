@@ -15,16 +15,23 @@ body {
 }
 
 /* estilos footer */
-.footer {
+footer.footer { 
   background: rgba(40, 28, 56, 0.8);
   color: white;
-  font-family: 'Chakra Petch', sans-serif;
+  font-size:small;
+  font-family: "Chakra Petch", sans-serif;
 }
 
-.footer-redes {
+.footer-redes{
   list-style-type: none;
-  align-items: center;
 }
+.btnIn{
+  background-color: #c3083f;
+  }
+  .btnIn:hover{
+    background-color: #d64671;
+    box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+    }
 
 /* estilos main login*/
 main{
