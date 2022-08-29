@@ -3,7 +3,6 @@
 body {
 background-image: linear-gradient(#c3083f, transparent 25%), url("https://cdn.wallpapersafari.com/48/68/lDb8cM.jpg");
   background-attachment: fixed;
-  background-blend-mode: normal;
   background-color: #130B1A;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
@@ -36,7 +35,11 @@ background-color: #c3083f;
 
 .navbar-nav .nav-item:hover .nav-link{
   color: white;
-  text-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+  text-shadow: 2px 2px 1rem #c3083f
+  -2px 2px .7rem #c3083f
+  2px -2px .7rem #c3083f
+  -2px -2px .7rem #c3083f;
+
   
 }
 
