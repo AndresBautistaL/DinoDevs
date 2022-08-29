@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap');
+
+body{
+    background-image: linear-gradient(#C3083F, #130B1A 25%);
+    background-attachment: fixed; 
+    ;
+}
+.navbar{
+    background: rgba(40, 28, 56, 0.8);
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.footer{
+    background: rgba(40, 28, 56, 0.8);
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.footer-redes{
+    list-style-type: none;
+    align-items: center;
+}
