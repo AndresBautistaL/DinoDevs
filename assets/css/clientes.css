@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap');
+
+body{
+    background-image: linear-gradient(#C3083F, #130B1A 25%);
+    background-attachment: fixed; 
+    ;
+}
+.navbar{
+    background: rgba(40, 28, 56, 0.8);
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.footer{
+    background: rgba(40, 28, 56, 0.8);
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.footer-redes{
+    list-style-type: none;
+    align-items: center;
+}
+
+
+#sidebar-container{
+    background: rgba(40, 28, 56, 0.8);
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    left: -200px; 
+    transition: all 300ms linear;
+}
+
+#sidebar-container.active{
+    left: 0px;
+} 
+
+.tituloLateral{
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+
+.linksLateral{
+    color: white;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+.menuLateral {
+    justify-content: flex-start;
+    color: white;
+
+}
+
+#sidebar-container .toggle-btn{
+    position: absolute;
+    left: 200px;
+    top:    5px;
+    cursor: pointer;
+}
+
+#sidebar-container .toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 15px;
+    border: 3px solid #000;
+}
+
+.tablaUsuarios {
+    position: static;
+    background-color: rgb(184, 182, 182, 0.5);
+    font-family: 'Barlow', sans-serif;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;  
+    justify-content: center;
+ 
+
+} 
+
+
+
