@@ -3,7 +3,8 @@
 html,body{
   height: 100%;}
 body {
-background-image: linear-gradient(#c3083f, transparent 25%), url("https://cdn.wallpapersafari.com/48/68/lDb8cM.jpg");
+background-image:linear-gradient(#c3083f, transparent 25%),url("https://wallpaperaccess.com/full/1836491.jpg");
+background-blend-mode: normal;
   background-attachment: fixed;
   background-color: #130B1A;
   font-family: "Barlow", sans-serif;
