@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/anadirproducto.css">
+
+    <title>Añadir producto</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <div class="container">
+      <a class="navbar-brand" href="../../index.html"> <img src="../img/logoEpic.png " style="height: 3rem;" alt="Logo Epic Merch"> EPIC MERCH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+      
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">INICIO<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/merch.html">MERCH</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="../pages/login.html">LOGIN</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Aqui empieza  -->
+<div class="container formulario p-3 needs-validation" novalidate id="formulario">
+  <div class="container p-2 m-1">
+    <div class="dropdown ">
+     <!-- primer boton -->
+  <button class="btn btn-primary dropdown-toggle"type="button" data-toggle="dropdown">
+ Panel Admin
+ </button>
+      <div class="dropdown-menu">
+       <a href="/Epic Merch/assets/pages/anadirproductos.html" class="dropdown-item">Añadir Producto</a>
+       <a href="/Epic Merch/assets/pages/clientes.html" class="dropdown-item">Clientes</a>
+      </div>
+      </div>
+      </div>
+   <h1 class="anadirpro">AÑADIR PRODUCTO</h1>
+   <hr/>
+   <div class="container central">
+    <!-- formulario -->
+   <form class= "was-validated">
+     <div class="form-row">
+     <div class="form-group col">
+     <label for="validationNombre">Nombre del producto</label>
+     <input type="text" class="form-control" id="Nombre"value="" required>
+   <div class="invalid-feedback">
+      Escribe nombre del producto 🐱‍💻
+    </div>
+     </div>
+   </div>
+ <div class="form-row">
+     <div class="form-group col">
+     <label for="Descripcion">Descripción del Producto</label>
+     <textarea class="form-control" id="Descripcion" rows="3" value="" required></textarea>
+     <div class="invalid-feedback">
+      Hazlo ver bonito👀
+    </div>
+     </div>
+ </div>
+   <div class="form-row">
+       <div class="form-group col">
+       <label for="Colores">Color</label>
+       <select id="Colores" class="form-control"value="" required>
+         <option selected></option>
+         <option>Negro</option>
+         <option>Rojo</option>
+         <option>Blanco </option>
+       </select>
+       <div class="invalid-feedback">
+      Escoge un color👌
+    </div>
+       </div>
+   </div>
+       <div class="form-row">
+       <div class="form-group col-6">
+       <label for="Tallas">Tallas</label>
+       <select id="Tallas" class="form-control"value="" required>
+         <option selected></option>
+         <option>Chica</option>
+         <option>Mediana</option>
+         <option>Grande</option>
+         <option>Extra-Grande</option>
+       </select>
+       <div class="invalid-feedback">
+      Elige talla 💪 🌮
+       </div>
+     </div>
+     <div class="form-group col-6">
+       <label for="Cantidad">Cantidad por Tallas</label>
+       <input type="text" class="form-control" id="Cantidad"value="" required>
+       <div class="invalid-feedback">
+      Cuanta mercancía tienes 🤑
+       </div>
+     </div> 
+     </div>
+     <div class="form-row">
+     <div class="form-group col-md-3">
+     <label for="Precio">Precio</label>
+     <input type="text" class="form-control" id="Precio"value="" required>
+     <div class="invalid-feedback">
+      ¿Cuánto cuesta? 💵
+    </div>
+     </div>
+     </div>
+ <!-- Boton de agregar producto --> 
+     <div class="form-row">
+     <div class= "form-group col-md-3">
+     <span class="btn btn-primary btn-file">
+       Agregar imagen <input type="file" required>
+     </span>
+    </div>
+    <!-- Termina boton de agregar -->
+   <!-- Boton  Enviar o cargar -->
+     <div class= "form-group col-md-2">
+     <button type="submit" class="btn btn-primary" id="enviar" onclick="recibirInformarcion">Enviar</button>
+     </div>
+   <!-- Termina boton -->
+     </div>
+     </form>
+     </div>
+ </div>
+<!-- Termina formulario -->
+<!-- footer -->
+<footer class="footer text-center mt-5 ">
+  <div class="footer container">
+      <div class="footer row">
+          <p class="footer-texto col-xs-12 col-md-9 m-auto py-1">
+              ALL RIGHTS RESERVED / INTERFACE DESIGN @DINODEVS /
+              <br />EPIC MERCH @LUIS DE LA TORRE SANTOYO
+          </p>
+          <div class="footer-redes row p-3 mx-auto">
+              <li class="col">
+                  <a class="footer-link" href="https://www.facebook.com/RexMerch1"><img
+                          src="../../assets/img/logoFacebook.png" alt="Facebook" style="height:2rem;"></a>
+              </li>
+              <li class="col">
+                  <a class="footer-link" href="https://www.instagram.com/epicmerch_gg/"><img
+                          src="../../assets/img/logoInstagram.png" alt="Instagram" style="height: 2rem"></a>
+              </li>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+<script src="../js/anadirproducto.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+  
+</html>

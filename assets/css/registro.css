@@ -1,0 +1,134 @@
+/* fuente importadas Chakra para titulos y Barlow para textos */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap");
+
+/* color de fondo */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background-image: linear-gradient(#c3083f, transparent 25%),
+    url("https://cdn.wallpapersafari.com/48/68/lDb8cM.jpg");
+  background-attachment: fixed;
+  background-color: #130b1a;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+/* estilos navbar */
+.navbar {
+  background: rgba(40, 28, 56, 0.8);
+  color: white;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: white;
+  text-shadow: 2px 2px 1rem #c3083f, -2px 2px 0.7rem #c3083f,
+    2px -2px 0.7rem #c3083f, -2px -2px 0.7rem #c3083f;
+}
+hr {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+/* estilos footer */
+footer.footer {
+  background: rgba(40, 28, 56, 0.8);
+  color: white;
+  font-size: small;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.footer-redes {
+  list-style-type: none;
+}
+.footer-redes img:hover {
+  filter: drop-shadow(0px 0px 0.5rem #c3083f);
+}
+
+.btn.btn-primary {
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #c3083f;
+  border: none;
+  align-self: center;
+}
+.btn.btn-primary:hover {
+  background-color: #d64671;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+}
+.btn.btn-primary:focus {
+  background: #d64671;
+  outline: none;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+}
+
+.btn.btn-primary:active {
+  background-color: #d64671;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+}
+
+/* estilos main login*/
+
+.container.registro {
+  max-width: 50rem;
+  align-items: center;
+  margin: auto;
+}
+
+.form-registro {
+  background: rgba(40, 28, 56, 0.95);
+}
+
+.form-control {
+  color: white;
+  border: none;
+  background-color: #7c629f;
+}
+.form-control::placeholder {
+  color: white;
+  opacity: 50%;
+}
+.form-control:focus {
+  background-color: white;
+  color: #130b1a;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.5);
+}
+
+/* texto "¿listos a jugar?" */
+.titulo1 {
+  font-family: "Chakra Petch", sans-serif;
+  color: #c3083f;
+}
+/* linea de color blanco debajo de la frase "¿listo para jugar?" */
+.linea {
+  background-color: white;
+  width: 43rem;
+  height: 2px;
+}
+/* texto "inicia sesión" */
+.titulo2 {
+  font-family: "Chakra Petch", sans-serif;
+}
+/* iconos de redes sociales para iniciar sesión */
+.iconosIn {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+/* textos que son hipervinculos para reset de contraseña y registro */
+.textoVinculo {
+  color: #c3083f;
+}
+
+.textoVinculo:hover {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 1rem #d64671, -2px 2px 0.7rem #d64671,
+    2px -2px 0.7rem #d64671, -2px -2px 0.7rem #d64671;
+}
+.iconosIn:hover{
+  filter: drop-shadow(0px 0px 0.5rem #c3083f);
+}

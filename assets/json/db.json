@@ -1,0 +1,34 @@
+{
+  "clientes": [
+    {
+      "nombre": "Pato José",
+      "apellido": "Cuac Cuac",
+      "codigoDeCiudad": "GDL",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Aquiles",
+      "apellido": "Chatito",
+      "codigoDeCiudad": "MTY"
+    },
+    {
+      "id": 3,
+      "nombre": "Prusa",
+      "apellido": "Michi",
+      "codigoDeCiudad": "CDMX"
+    },
+    {
+      "id": 4,
+      "nombre": "Cosmo",
+      "apellido": "Cat",
+      "codigoDeCiudad": "QRO"
+    },
+    {
+      "nombre": "Blanche",
+      "apellido": "Chatita",
+      "codigoDeCiudad": "CDMX",
+      "id": 5
+    }
+  ]
+}
