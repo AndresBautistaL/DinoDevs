@@ -1,101 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap');
-
-body{
-    background-image: linear-gradient(transparent, #4E1633);
-    background-attachment: fixed;
-    background-color: #130B1A;
-    color: white;
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap");
+html,body{
+    height: 100%;}
+body {
+  background-image: linear-gradient(transparent, #4e1633);
+  background-attachment: fixed;
+  background-color: #130b1a;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
 }
-.navbar{
-    background: rgba(40, 28, 56);
-    color: white;
-    font-family: 'Chakra Petch', sans-serif;
+.navbar {
+  background: rgba(40, 28, 56);
+  color: white;
+  font-family: "Chakra Petch", sans-serif;
 }
-.navbar-nav .nav-item:hover .nav-link{
-    color: white;
-    text-shadow: 1 1 0.5rem 0.2rem #c3083f,
-    -1 1 0.5rem 0.2rem #c3083f,
-    1 -1 0.5rem 0.2rem #c3083f,
-    -1 -1 0.5rem 0.2rem #c3083f;
-    box-shadow: #c3083f;
-  }
-
-.jumbotron{
-    display: flex;
-    height: 90vh;
-    text-shadow: #130B1A;
-    background: rgba(28, 12, 49, 0.8);
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/09677898135819.5ed81af4d6f2a.gif');
-    background-attachment: fixed;
-    background-position: bottom;
-    background-size: cover;
+.navbar-nav .nav-item:active .nav-link {
+  color: white;
 }
-.texto-jumbo{
-    text-shadow:  2px 2px 1rem #130B1A,
-    -2px 2px .7rem #130B1A,
-    2px -2px .7rem #130B1A,
-    -2px -2px .7rem #130B1A;
-    margin-top: auto;
-    text-align: center;
-    
+.navbar-nav .nav-item:hover .nav-link {
+  color: white;
+  text-shadow: 2px 2px 1rem #c3083f, -2px 2px 0.7rem #c3083f,
+    2px -2px 0.7rem #c3083f, -2px -2px 0.7rem #c3083f;
 }
 
-hr{
-    border: 1px solid white;
+.jumbotron {
+  display: flex;
+  min-height: 95vh;
+  max-height: 100vh;
+  text-shadow: #130b1a;
+  background: rgba(28, 12, 49, 0.8);
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/09677898135819.5ed81af4d6f2a.gif");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
 }
-h1{
-    font-family: 'Chakra Petch', sans-serif;
-}
-h2{
-    font-family: 'Chakra Petch', sans-serif;
-}
-.btn{
-    border: none;
-    background-color: #c3083f;
-    }
-    .btn:hover{
-        background-color: #d64671;
-        box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
-        }
-.tarjetas{
-justify-content: center;
-width: 100%;
-height: 100%;
-}
-.card{
-    background-color: #281C38;
+.texto-jumbo {
+  text-shadow: 2px 2px 1rem #130b1a, -2px 2px 0.7rem #130b1a,
+    2px -2px 0.7rem #130b1a, -2px -2px 0.7rem #130b1a;
+  margin-top: auto;
+  text-align: center;
 }
 
-.descuento{
-    align-items: center;
-    text-align: center;
-    margin: auto;
+hr {
+  border: 1px solid white;
 }
-.banner{
-    background-color: #281C38;
-    background-image: url('https://jherem.nyc3.digitaloceanspaces.com/jherem2020/wp-content/uploads/2021/05/23212205/Edit-HD_4.2019-05-09-18_01_13.gif');
-    background-blend-mode: hard-light;
-    background-size: cover;
-    background-position: center;
+h1, h2, h4{
+  font-family: "Chakra Petch", sans-serif;
+  text-transform: uppercase;
 }
-.carousel-slide{
-    font-family: 'Chakra Petch', sans-serif;
-    justify-content: center;
-    width: 50%;
-    height: 100%;  
-    align-items: center;
+
+u{
+  text-decoration: none;
+  color: #C3083F;
+}
+.nombre-resena {
+  font-family: "Chakra Petch", sans-serif;
+  color: #c3083f;
   
 }
-footer.footer { 
-    background: rgba(40, 28, 56, 0.8);
-    color: white;
-    font-size:small;
-    font-family: "Chakra Petch", sans-serif;
+.btn {
+  border: none;
+  background-color: #c3083f;
+}
+.btn:hover {
+  background-color: #d64671;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+}
+.tarjetas {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.card {
+  background-color: #281c38;
+}
+.onsale {
+
+  position:absolute;
+  top: 10 px;
+  left: 15 px;
+  padding: 15 px 15 px;
+  background: #C3083F;
+  color:aliceblue;
+  text-transform: uppercase;
+  font-size: 1 px;
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 7;
   }
+
+.descuento {
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+.banner {
+  background-color: #281c38;
+  background-image: url("https://jherem.nyc3.digitaloceanspaces.com/jherem2020/wp-content/uploads/2021/05/23212205/Edit-HD_4.2019-05-09-18_01_13.gif");
+  background-blend-mode: hard-light;
+  background-size: cover;
+  background-position: center;
+}
+.carousel-slide {
+  font-family: "Chakra Petch", sans-serif;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+}
+
+.texto-resena{
+  margin-left: auto;
+  margin-right: auto;
+}
+footer.footer {
+  background: rgba(40, 28, 56, 0.8);
+  color: white;
+  font-size: small;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.footer-redes {
+  list-style-type: none;
+}
+.footer-redes img:hover {
+  filter: drop-shadow(0px 0px 0.5rem #c3083f);
+}
+
+/* Reseñas */
+.card-resena{
+  box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+  border:1px solid #d64671;
+  border-radius: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35rem;
+  height: 35rem;
+}
+.card-imagen{
+  border-radius: 2%;
+  margin-left: auto;
+  margin-right: auto;
   
-  .footer-redes{
-    list-style-type: none;
-  }
+}
+.card-imagen{
+  align-self: auto;
+  border-radius: 2%;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}

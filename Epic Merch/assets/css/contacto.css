@@ -1,61 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap");
 
+html,body{
+  height: 100%;}
 body {
 background-image: linear-gradient(#c3083f, transparent 25%), url("https://cdn.wallpapersafari.com/48/68/lDb8cM.jpg");
   background-attachment: fixed;
   background-color: #130B1A;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
 }
 
 hr {
   border: 1px solid rgb(255, 255, 255);
 }
 
-h4{
+h2{
   font-family:"Chakra Petch", sans-serif;
   color: #c3083f;
 }
 
-.btn{
+.btn {
 background-color: #c3083f;
 }
 .btn:hover{
   background-color: #d64671;
   box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
   }
-
+  .btn:not(:disabled):not(:disabled):active:{
+    background-color: #d64671;
+    box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+    }
+    .btn:focus{
+      background:#d64671;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
+    }
 
 .navbar {
   background: rgba(40, 28, 56, 0.8);
   color: white;
   font-family: "Chakra Petch", sans-serif;
 }
-
-
 .navbar-nav .nav-item:hover .nav-link{
   color: white;
-  text-shadow: 2px 2px 1rem #c3083f
-  -2px 2px .7rem #c3083f
-  2px -2px .7rem #c3083f
+  text-shadow: 2px 2px 1rem #c3083f,
+  -2px 2px .7rem #c3083f,
+  2px -2px .7rem #c3083f,
   -2px -2px .7rem #c3083f;
-
-  
 }
 
 
 .container.contacto {
-  height: 85vh;
-  display: flex;
+  max-width: 50rem;
   align-items: center;
-  margin-top: auto;}
+  margin: auto;
+}
 
 .form-contacto{
-  background: rgba(40, 28, 56, 0.95)
+  background: rgba(40, 28, 56, 0.95);
 }
 
 .form-control {
   border:none;
+  color: white;
   background-color: #7C629F;
 }
   .form-control::placeholder {
@@ -64,7 +72,8 @@ background-color: #c3083f;
 
 }
 .form-control:focus {
-  background-color: #7C629F;
+  background-color: white;
+  color: #130B1A;
   box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.5);
 }
 
@@ -77,4 +86,7 @@ footer.footer {
 
 .footer-redes{
   list-style-type: none;
+}
+.footer-redes img:hover{
+  filter: drop-shadow(0px 0px .5rem #c3083f)
 }

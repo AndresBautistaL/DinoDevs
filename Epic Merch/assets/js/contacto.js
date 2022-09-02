@@ -7,7 +7,7 @@ const validaciones={
 
 }
 
-formularioContacto.addEventListener("submit", (evento)=>{
-evento.preventDefault();
-console.log("clickity");
+formularioContacto.addEventListener("submit", (e)=>{
+alert("Correo enviado");
+e.preventDefault();
 });

@@ -1,144 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
 
-    <!-- CSS propio -->
-    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../css/registro.css" />
+
+    <title>Epic Merch</title>
 </head>
+
 <body>
-        <!-- navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark mb-5">
-            <div class="container">
-                <a class="navbar-brand" href="../../index.html"> <img src="../img/logoEpic.png" style="height: 3rem;"
-                        alt="Logo Epic Merch">
-                    EPIC MERCH</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="../../index.html">INICIO<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="merch.html">MERCH</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">NOSOTROS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">CONTACTO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">LOGIN</a>
-                        </li>
-                    </ul>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="container">
+        <a class="navbar-brand" href="../../index.html"> <img src="../img/logoEpic.png " style="height: 3rem;" alt="Logo Epic Merch"> EPIC MERCH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">INICIO<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/merch.html">MERCH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../pages/login.html">LOGIN</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container registro p-3" id="formularioRegistro">
+        <div class="col m-auto">
+            <form class="form-registro rounded-lg text-white p-5">
+                <div class="text-center mb-3">
+                    <div class="titulo1 text-center my-4 mb-2">
+                        <h2>¿LISTO PARA JUGAR?</h2>
+                    <hr/>
                 </div>
+                    
+        
+                    <div class="titulo2 text-center mb-3 text-white">
+                        <h3>REGÍSTRATE</h3>
+                    </div>
+                    <!-- botones de registro con redes sociales -->
+        
+                    <button type="button" class="btn btn-link btn-floating mx-1" >
+                        <i class="fab fa-google"></i>
+                        <img class="iconosIn" src="../img/imgLogin/logoGoogle.png" alt="google logo">
+                    </button>
+        
+                    <button type="button" class="btn btn-link btn-floating mx-1" >
+                        <i class="fab fa-facebook-f"></i>
+                        <img class="iconosIn" src="../img/imgLogin/logoFacebook.png" alt="facebook logo">
+                    </button>
+        
+                    <button type="button" class="btn btn-link btn-floating mx-1" >
+                        <i class="fab fa-twitter"></i>
+                        <img class="iconosIn" src="../img/imgLogin/logoTwitter.png" alt="twitter logo">
+                    </button>
+                </div>
+        
+                <p class="text-center">o:</p>
+        
+                <!-- Name input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="regNombre">Ingresa tu nombre:</label>
+                    <input type="text" id="regNombre" class="form-control" />
+                    <div class="valid-feedback">Nombre valido.</div>
+                    <div class="invalid-feedback">Debes ingresar tu nombre.</div>
+                </div>
+        
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="regCorreo">Ingresa tu correo electrónico:</label>
+                    <input type="email" id="regCorreo" class="form-control" />
+                    <div class="valid-feedback">Correo valido.</div>
+                    <div class="invalid-feedback">Formato de correo invalido.</div>
+                </div>
+        
+                <!-- Username input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="regUsuario">Elige un nombre de usuario:</label>
+                    <input type="text" id="regUsuario" class="form-control" />
+                    <div class="valid-feedback">Nombre de usuario válido.</div>
+                    <div class="invalid-feedback">El nombre de usuario no puede incluir espacios.</div>
+                </div>
+        
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="regContrasena">Escribe una contraseña:</label>
+                    <input type="password" id="regContrasena" class="form-control" />
+                    <div class="valid-feedback">Contraseña segura </div>
+                    <div class="invalid-feedback">La contraseña debe tener entre 8 y 16 carácteres e incluir un número.</div>
+                </div>
+        
+                <!-- Repeat Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="repContrasena">Repite tu contraseña:</label>
+                    <input type="password" id="repContrasena" class="form-control" />
+                    <div class="valid-feedback">La contraseña coincide</div>
+                    <div class="invalid-feedback">La contraseña no coincide o es poco segura</div>
+                </div>
+        
+                <!-- Checkbox -->
+                <div class="form-check d-flex mb-4">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+                        aria-describedby="registerCheckHelpText" />
+                    <label class="form-check-label" for="registerCheck">
+                        He leído y acepto los términos y condiciones del servicio
+                    </label>
+                </div>
+        
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center">
+                    <input type="button" id="enviarBtn" class="btn btn-primary" value="ENVIAR"  onclick="registrar()" disabled="true">
             </div>
-        </nav>
-    
-<main class="d-flex">
-<div class="container-Reg">
-<div class="tab-pane justify-content-center text-white" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-    <form>
-        <div class="text-center mb-3">
-            <div class="titulo1 text-center my-4 mb-2">
-                <h2>¿LISTO PARA JUGAR?</h2>
-            </div>
-            <hr class="linea"/>
-
-            <div class="titulo2 text-center mb-3 text-white">
-                <h3>REGISTRATE</h3>
-            </div>
-            <!-- botones de registro con redes sociales -->
-
-            <button type="button" class="btn btn-link btn-floating mx-1" >
-                <i class="fab fa-google"></i>
-                <img class="iconosIn" src="../img/imgLogin/logoGoogle.png" alt="google logo">
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1" >
-                <i class="fab fa-facebook-f"></i>
-                <img class="iconosIn" src="../img/imgLogin/logoFacebook.png" alt="facebook logo">
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1" >
-                <i class="fab fa-twitter"></i>
-                <img class="iconosIn" src="../img/imgLogin/logoTwitter.png" alt="twitter logo">
-            </button>
+        
+                <!-- Boton de regresar a iniciar sesión -->
+                <div class="login text-center p-3">
+                    <p class="text-white">¿Ya tienes cuenta? </p> 
+                    <a class= "textoVinculo "href="../pages/login.html">Inicia sesión</a></p>
+                </div>
+            </form>
         </div>
-
-        <p class="text-center">o:</p>
-
-        <!-- Name input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="registerName">Ingresa tu nombre:</label>
-            <input type="text" id="registerName" class="form-control" />
-        </div>
-
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="registerEmail">Ingresa tu correo electronico:</label>
-            <input type="email" id="registerEmail" class="form-control" />
-        </div>
-
-        <!-- Username input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="registerUsername">Elige un nombre de usuario:</label>
-            <input type="text" id="registerUsername" class="form-control" />
-        </div>
-
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="registerPassword">Escribe una contraseña:</label>
-            <input type="password" id="registerPassword" class="form-control" />
-        </div>
-
-        <!-- Repeat Password input -->
-        <div class="form-outline mb-4">
-            <label class="form-label" for="registerRepeatPassword">Repite tu contraseña:</label>
-            <input type="password" id="registerRepeatPassword" class="form-control" />
-        </div>
-
-        <!-- Checkbox -->
-        <div class="form-check d-flex mb-4">
-            <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-                aria-describedby="registerCheckHelpText" />
-            <label class="form-check-label" for="registerCheck">
-                He leído y acepto los terminos y condiciones del servicio
-            </label>
-        </div>
-
-        <!-- Submit button -->
-        <button type="submit" class="btnReg p-2">REGISTRARSE</button>
-
-        <!-- Boton de regresar a iniciar sesión -->
-        <div class="login text-center">
-            <p class="text-white">¿Ya tienes cuenta? </p> 
-            <a class= "textoVinculo "href="../pages/login.html">Inicia sesión</a></p>
-        </div>
-    </form>
-</div>
-</div>
-<!-- Pills content -->
-
-</div>
-</div>
-
-</main>
+    </div>
 
 
-    <!-- footer -->
-    <footer class="footer text-center mt-5 ">
+    <footer class="footer text-center">
         <div class="footer container">
             <div class="footer row">
                 <p class="footer-texto col-xs-12 col-md-9 m-auto py-1">
@@ -159,14 +162,14 @@
         </div>
     </footer>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-
+    <script src="../js/validation.js"></script>
+    <script src="../js/registro.js"></script>
 </body>
+
 </html>

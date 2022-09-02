@@ -11,93 +11,137 @@
 
     <title>Añadir producto</title>
   </head>
-  
   <body>
-    <div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="../../index.html"> <img src="../img/logoEpic.png" style="height: 3rem;" alt="Logo Epic Merch"> EPIC MERCH</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html">INICIO<span class="sr-only">(current)</span></a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="merch.html">MERCH</a> </li> 
-                <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                <li class="nav-item">
-           <a class="nav-link" href="login.html">LOGIN</a></li>
-      </ul>
-    </div>
-  </nav>
-</div> 
-<!-- Barra Lateral -->
-
-  <div id="sidebar-container" class="active">
-    <div class="toggle-btn">
-        <span>&#9776</span>
+      <a class="navbar-brand" href="../../index.html"> <img src="../img/logoEpic.png " style="height: 3rem;" alt="Logo Epic Merch"> EPIC MERCH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       </div>
-        <div class="menuLateral text-center">
-          <h3 class="tituloLateral">PANEL ADMIN</h3>
-          <a class="linksLateral d-block p-5" href="anadirproductos.html">Añadir Productos</a>
-          <a class="linksLateral d-block p-5" href="clientes.html">Clientes</a>
-       <box-icon name='game' class="bx bx-chevron-right toggle"></box-icon> 
-    </div>
-  </div>
-
-
- 
-
-       <h1 class="anadirpro text white">Añadir Producto </h1>
-       <div class="container">
-       <div class="row"> 
-       <div class="col-5">
-        <img src="../img/agregar imagen.png" alt="">
+      
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">INICIO<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/merch.html">MERCH</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="../pages/login.html">LOGIN</a>
+            </li>
+        </ul>
       </div>
-      <div class="col">
+    </nav>
 
-        <span class="btn btn-primary btn-file">
-          Agregar imagen <input type="file">
-        </span>
-        
-       
-         <form class="d-fluid text-white">
-          <div class="form-row">
-            <div class="form-group col-md-7 ">
-          <label for="inputEmail4">Nombre del Producto:</label>
-           <input type="email" class="form-control" id="inputEmail4"></div>
-           <div class="form-group col-md-7">
-          <label for="inputPassword4">Descripcion del Producto</label>
-          <input type="" class="form-control p-5" id="inputPassword4"></div>
+    <!-- Aqui empieza  -->
+<div class="container formulario p-3 needs-validation" novalidate id="formulario">
+  <div class="container p-2 m-1">
+    <div class="dropdown ">
+     <!-- primer boton -->
+  <button class="btn btn-primary dropdown-toggle"type="button" data-toggle="dropdown">
+ Panel Admin
+ </button>
+      <div class="dropdown-menu">
+       <a href="/Epic Merch/assets/pages/anadirproductos.html" class="dropdown-item">Añadir Producto</a>
+       <a href="/Epic Merch/assets/pages/clientes.html" class="dropdown-item">Clientes</a>
+      </div>
+      </div>
+      </div>
+   <h1 class="anadirpro">AÑADIR PRODUCTO</h1>
+   <hr/>
+   <div class="container central">
+    <!-- formulario -->
+   <form class= "was-validated">
+     <div class="form-row">
+     <div class="form-group col">
+     <label for="validationNombre">Nombre del producto</label>
+     <input type="text" class="form-control" id="Nombre"value="" required>
+   <div class="invalid-feedback">
+      Escribe nombre del producto 🐱‍💻
+    </div>
+     </div>
+   </div>
+ <div class="form-row">
+     <div class="form-group col">
+     <label for="Descripcion">Descripción del Producto</label>
+     <textarea class="form-control" id="Descripcion" rows="3" value="" required></textarea>
+     <div class="invalid-feedback">
+      Hazlo ver bonito👀
+    </div>
+     </div>
+ </div>
+   <div class="form-row">
+       <div class="form-group col">
+       <label for="Colores">Color</label>
+       <select id="Colores" class="form-control"value="" required>
+         <option selected></option>
+         <option>Negro</option>
+         <option>Rojo</option>
+         <option>Blanco </option>
+       </select>
+       <div class="invalid-feedback">
+      Escoge un color👌
+    </div>
        </div>
-       <div class="form-group col-7">
-          <label for="inputAddress">Colores</label>
-          <input type="text" class="form-control" id="inputAddress"placeholder=></div>
-          <div class="form-row">
-            <div class="form-group col-3">
-              <label for="inputCity">Tallas</label>
-              <input type="text" class="form-control" id="inputCity">
+   </div>
+       <div class="form-row">
+       <div class="form-group col-6">
+       <label for="Tallas">Tallas</label>
+       <select id="Tallas" class="form-control"value="" required>
+         <option selected></option>
+         <option>Chica</option>
+         <option>Mediana</option>
+         <option>Grande</option>
+         <option>Extra-Grande</option>
+       </select>
+       <div class="invalid-feedback">
+      Elige talla 💪 🌮
        </div>
-    <div class="form-group col-3">
-        <label for="inputZip">Cantidad por Tallas</label>
-        <input type="text" class="form-control" id="inputZip">
-         </div>
-        </div>
-        <div class="form-group col-3">
-         <label for="inputAddress2">Precio</label>
-         <input type="text" class="form-control" id="inputAddress2" placeholder=></div>
-         
-        </form>
-        
-      </div>
+     </div>
+     <div class="form-group col-6">
+       <label for="Cantidad">Cantidad por Tallas</label>
+       <input type="text" class="form-control" id="Cantidad"value="" required>
+       <div class="invalid-feedback">
+      Cuanta mercancía tienes 🤑
+       </div>
+     </div> 
+     </div>
+     <div class="form-row">
+     <div class="form-group col-md-3">
+     <label for="Precio">Precio</label>
+     <input type="text" class="form-control" id="Precio"value="" required>
+     <div class="invalid-feedback">
+      ¿Cuánto cuesta? 💵
     </div>
-
+     </div>
+     </div>
+ <!-- Boton de agregar producto --> 
+     <div class="form-row">
+     <div class= "form-group col-md-3">
+     <span class="btn btn-primary btn-file">
+       Agregar imagen <input type="file" required>
+     </span>
+    </div>
+    <!-- Termina boton de agregar -->
+   <!-- Boton  Enviar o cargar -->
+     <div class= "form-group col-md-2">
+     <button type="submit" class="btn btn-primary" id="enviar" onclick="recibirInformarcion">Enviar</button>
+     </div>
+   <!-- Termina boton -->
+     </div>
+     </form>
+     </div>
+ </div>
+<!-- Termina formulario -->
 <!-- footer -->
 <footer class="footer text-center mt-5 ">
   <div class="footer container">
