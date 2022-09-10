@@ -5,9 +5,9 @@ body {
   height: 100%;
 }
 body {
-  background-image: linear-gradient(#c3083f, transparent 25%);
+  background-image: linear-gradient(transparent, #4e1633);
   background-attachment: fixed;
-  background-color: #130b1a;
+  background-color: #130b1a;;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   display: flex;

@@ -29,7 +29,8 @@ body {
   max-height: 100vh;
   text-shadow: #130b1a;
   background: rgba(28, 12, 49, 0.8);
-  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/09677898135819.5ed81af4d6f2a.gif");
+  background-image: url("../img/EpicMerch.gif");
+  /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/09677898135819.5ed81af4d6f2a.gif"); */
   background-attachment: fixed;
   background-position: bottom;
   background-size: cover;
@@ -95,9 +96,9 @@ u{
   margin: auto;
 }
 .banner {
-  background-color: #281c38;
+  background-color: #130b1a;
   background-image: url("https://jherem.nyc3.digitaloceanspaces.com/jherem2020/wp-content/uploads/2021/05/23212205/Edit-HD_4.2019-05-09-18_01_13.gif");
-  background-blend-mode: hard-light;
+  background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
 }

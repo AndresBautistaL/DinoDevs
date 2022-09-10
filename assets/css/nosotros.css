@@ -2,11 +2,11 @@
 
 html,
 body {
-  height: 100%;
+height: 100%;
 }
 
 body {
-  background-image: linear-gradient(#c3083f, transparent 25%);
+  background-image: linear-gradient(transparent, #4e1633);
   background-attachment: fixed;
   background-color: #130b1a;
   font-family: "Barlow", sans-serif;
@@ -40,8 +40,8 @@ h4{
 }
 
 #logo {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
   height: 30px;
   width: 30px;
 }
@@ -95,12 +95,12 @@ footer.footer {
   border: none;
   background-color: transparent;
   width: 20rem;
-  height: 35rem;
+  min-height: 30rem;
   perspective: 1000px;
 }
 
 .flip-card-inner {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -140,6 +140,8 @@ footer.footer {
 }
 
 .flip-card-back {
+  margin-top: auto;
+  margin-bottom: auto;
   background-image: linear-gradient(transparent 50%, #c3083f);
   background-color: rgba(40, 28, 56, 0.8);
   border: none;
@@ -155,9 +157,7 @@ footer.footer {
   object-position: 0% 0%;
 }
 
-.info-redes {
-  list-style-type: none;
-}
+
 .info-redes img {
   height: 30px;
   width: 30px;
@@ -209,4 +209,17 @@ footer.footer {
 .carta-info {
   display: flex;
   justify-content: center;
+  min-height: 30rem;
+  max-height: fit-content;
+
+}
+
+.card-info{
+  margin-bottom: auto;
+}
+
+.link-carta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
