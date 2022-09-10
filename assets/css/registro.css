@@ -5,7 +5,9 @@
 
 html,
 body {
-  height: 100%;
+  background-image: linear-gradient(transparent, #4e1633);
+  background-attachment: fixed;
+  background-color: #130b1a;
 }
 body {
   background-image: linear-gradient(#c3083f, transparent 25%),
