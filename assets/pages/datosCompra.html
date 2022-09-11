@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../css/registro.css" />
+
+    <title>Epic Merch</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="container">
+        <a class="navbar-brand" href="../../index.html"> <img src="../img/logoEpic.png " style="height: 3rem;" alt="Logo Epic Merch"> EPIC MERCH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">INICIO<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/merch.html">MERCH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../pages/login.html">LOGIN</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container registro p-3" id="formularioRegistro">
+        <div class="col m-auto">
+            <form class="form-registro rounded-lg text-white p-5">
+                <div class="text-center mb-3">
+                    <div class="titulo1 text-center my-4 mb-2">
+                        <h2>¿LISTO PARA JUGAR?</h2>
+                    <hr/>
+                </div>
+                    
+        
+                    <div class="titulo2 text-center mb-3 text-white">
+                        <h3>DATOS DE ENVÍO</h3>
+                    </div>
+                
+        
+                <!-- Name input -->
+                <div class="form-group row">
+                    <label class="form-labelcol-form-label col-form-label-sm col-sm-2" for="regNombre">Nombre:</label>
+                    <input type="text" id="regNombre" class="form-control col-sm-10" />
+                    <div class="valid-feedback">Nombre válido.</div>
+                    <div class="invalid-feedback">Debes ingresar tu nombre</div>
+                </div>
+        
+                <!-- Email input -->
+                <div class="form-group row">
+                    <label class="form-label col-form-label col-form-label-sm col-sm-2" for="regCorreo">Apellido:</label>
+                    <input type="email" id="regCorreo" class="form-control col-sm-10" />
+                    <div class="valid-feedback">Correo válido.</div>
+                    <div class="invalid-feedback">Formato de correo inválido</div>
+                </div>
+        
+                <!-- Username input -->
+                <div class="form-group row">
+                    <label class="form-label col-form-label col-form-label-sm col-sm-2" for="regUsuario">Calle y número:</label>
+                    <input type="text" id="regUsuario" class="form-control col-sm-10" />
+                    <div class="valid-feedback">Nombre de usuario válido.</div>
+                    <div class="invalid-feedback">El nombre de usuario no puede incluir espacios</div>
+                </div>
+        
+                <!-- Password input -->
+                <div class="form-group row">
+                    <label class="form-label col-form-label col-form-label-sm col-sm-2" for="regContrasena">Colonia:</label>
+                    <input type="text" id="regContrasena" class="form-control col-sm-10" />
+                    <div class="valid-feedback">Contraseña segura </div>
+                    <div class="invalid-feedback">La contraseña debe tener entre 8 y 16 caracteres e incluir al menos una letra y un número</div>
+                </div>
+        
+                <!-- Repeat Password input -->
+                <div class="form-group row">
+                    <label class="form-label col-form-label col-form-label-sm col-sm-2" for="repContrasena">Localidad:</label>
+                    <input type="text" id="repContrasena" class="form-control col-sm-10" />
+                    <div class="valid-feedback">La contraseña coincide</div>
+                    <div class="invalid-feedback">La contraseña no coincide o es poco segura</div>
+                </div>
+                <!-- Estado -->
+                <div class="form-group row">
+                    <label class="form-label col-form-label col-form-label-sm col-sm-2" for="repContrasena">Estado:</label>
+                    <input type="text" id="repContrasena" class="form-control col-sm-10" />
+                    <div class="valid-feedback">La contraseña coincide</div>
+                    <div class="invalid-feedback">La contraseña no coincide o es poco segura</div>
+                </div>
+                <!-- País -->
+                <div class="form-group row">
+                    <label class="form-label col-form-label col-form-label-sm col-sm-2" for="repContrasena">País:</label>
+                    <input type="text" id="repContrasena" class="form-control col-sm-5" />
+                    <div class="valid-feedback">La contraseña coincide</div>
+                    <div class="invalid-feedback">La contraseña no coincide o es poco segura</div>
+                <label class="form-label col-form-label col-form-label-sm col-sm-1" for="repContrasena">CP:</label>
+                    <input type="text" id="repContrasena" class="form-control col-sm-4" />
+                    <div class="valid-feedback">La contraseña coincide</div>
+                    <div class="invalid-feedback">La contraseña no coincide o es poco segura</div>
+                </div>
+                <!-- CP -->
+                
+                    
+                
+                <!-- Teléfono -->
+                <div class="form-group row">
+                    <label class="form-label col-form-label col-form-label-sm col-sm-2" for="repContrasena">Teléfono:</label>
+                    <input type="text" id="repContrasena" class="form-control col-sm-10" />
+                    <div class="valid-feedback">La contraseña coincide</div>
+                    <div class="invalid-feedback">La contraseña no coincide o es poco segura</div>
+                </div>
+                <!-- Referencias -->
+                <div class="form-group row">
+                    <label for="colFormLabelSm"
+                        class="form-label col-form-label col-form-label-sm col-sm-2">Referencias:</label>
+                    <div class="col-sm-10 p-0">
+                        <textarea class="form-control m-0" id="referencias" rows = "5" placeholder="Referencias"/></textarea>
+                        <div class="valid-feedback">Mensaje válido</div>
+                        <div class="invalid-feedback">No has escrito un mensaje</div>
+                    </div>
+                </div>
+                <hr/>
+                <!-- Formas de pago -->
+
+                <div class="titulo2 text-center mb-3 text-white">
+                    <h3>FORMA DE PAGO</h3>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">VISA</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Mastercard</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">American Express</label>
+                  </div>
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center">
+                    <input type="button" id="enviarBtn" class="btn btn-primary" value="ENVIAR"  onclick="registrar()" disabled="true">
+            </div>
+        
+                <!-- Boton de regresar a iniciar sesión -->
+                <div class="login text-center p-3">
+                    <p class="text-white">¿Ya tienes cuenta? </p> 
+                    <a class= "textoVinculo "href="../pages/login.html">Inicia sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+    <footer class="footer text-center">
+        <div class="footer container">
+            <div class="footer row">
+                <p class="footer-texto col-xs-12 col-md-9 m-auto py-1">
+                    ALL RIGHTS RESERVED / INTERFACE DESIGN @DINODEVS /
+                    <br />EPIC MERCH @LUIS DE LA TORRE SANTOYO
+                </p>
+                <div class="footer-redes row p-3 mx-auto">
+                    <li class="col">
+                        <a class="footer-link" href="https://www.facebook.com/RexMerch1"><img
+                                src="../../assets/img/logoFacebook.png" alt="Facebook" style="height:2rem;"></a>
+                    </li>
+                    <li class="col">
+                        <a class="footer-link" href="https://www.instagram.com/epicmerch_gg/"><img
+                                src="../../assets/img/logoInstagram.png" alt="Instagram" style="height: 2rem"></a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="../js/validation.js"></script>
+    <script src="../js/registro.js"></script>
+</body>
+
+</html>
