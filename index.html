@@ -16,10 +16,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/887a835504.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="assets/css/carrito.css">
+
 
     <title>Epic Merch</title>
   </head>
@@ -71,6 +69,51 @@
       </div>
     </nav>
 
+    <!-- Carrito -->
+    <div id="sidebar-container" class="justify-items-center text-center">
+      <div class="toggle-btn">
+          <span><img src="assets/img/cart.png" alt="carrito" class="p-1"></span>
+        </div>
+        <div id="carrito">
+          <div class="desc container col-12 mb-3">
+            <div class="descuento p-2 col-12">
+              <h6>Envío gratis a toda la República Mexicana</h6>
+            </div>
+          </div>
+                                    
+          <table id="lista-carrito " class="nombrecarrito text-white">
+              <thead>
+                  <tr>
+                    <th>IMAGEN</th>
+                    <th>NOMBRE</th>
+                    <th>CANTIDAD</th>
+                    <th>PRECIO</th>
+                  </tr>
+              </thead>
+              <tbody id="items"></tbody>
+          </table>
+  
+          <a href="#" id="vaciar-carrito" class="button nombrecarrito text-white p-3">Vaciar Carrito</a>
+          <div class="col m-auto">
+     
+            <button class="btn btn-primary button-checkout m-3">Checkout</button>
+          </div>
+  </div>
+  <template id="template-carrito">
+    <tr>
+      <th scope="row" class="col-2">
+        <img src="" width="50px" height="50px">
+      </th>
+      <td class="col-6">Café</td>
+      <td class="col-2">1</td>
+      <td class="col-2">$<span>500</span></td> 
+      <div class="col-12"><hr></div>
+    </tr>
+  
+  </template>
+    </div>
+    
+
     <!-- Vista principal -->
 
     <div class="jumbotron jumbotron-fluid">
@@ -87,21 +130,105 @@
     <!-- Tarjetas -->
     <div class="container">
       <div class="tarjetas">
-        <h2>PRODUCTOS HOT 🔥</h2>
+        <h2>LO + HOT DEL MOMENTO 🥵🔥</h2>
         <div class="row row-cols-1 row-cols-md-3 p-3">
           <div class="col d-flex justify-content-center mb-4">
             <div class="card shadow mb-1" style="width: 20rem">
-              <span class="onsale">🤖💗💥</span>
+              <span class="onsale">❤️‍🔥🔥🧨</span>
               <img
-                src="assets/img/imagens productos.img/Fotos/card1.jpg"
+                src="assets/img/imagens productos.img/Fotos/fnatic_jersey_2017_front_sized_trans_1024x1024.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h2>Hoodie Faze Clan</h2>
+                <h2>Jersery Fnatic Classic</h2>
                 <hr class="lineah" />
                 <p class="card-text text-white-75 description">
-                  Rojo Explosivo / Talla Grande💥🎮🏹
+                  Negro ⚫🟡 / Talla Grande
+                </p>
+                <p class="card-text text-white-15 description">
+                  El Fnatic de los shooters 🔫
+                </p>
+                <h5 class="text-white-100">
+                  Precio: <span class="precio">$ 500 MXN</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Añadir a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1" style="width: 20rem">
+              <span class="onsale">❤️‍🔥🔥🧨</span>
+              <img
+                src="assets/img/imagens productos.img/Fotos/Jersey Cloud 9 worlds.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2>Jersery Cloud-9</h2>
+                <hr class="lineah" />
+                <p class="card-text text-white-75 description">
+                  Negro ⚫🔵 / Talla Grande
+                </p>
+                <p class="card-text text-white-15 description">
+                  Red Bull te lleva a la nube 🐂☁️
+                </p>
+                <h5 class="text-white-100">
+                  Precio: <span class="precio">$ 500 MXN</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Añadir a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1" style="width: 20rem">
+              <span class="onsale">❤️‍🔥🔥🧨</span>
+              <img
+                src="assets/img/imagens productos.img/Fotos/G2 2020 PNG.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2>Jersey G2 e-sports</h2>
+                <hr class="lineah" />
+                <p class="card-text text-white-75 description">
+                  Negro ⚫🔴 / Talla Grande
+                </p>
+                <p class="card-text text-white-15 description">
+                  El ninja mas cool de hood 🥷
+                </p>
+                <h5 class="text-white-100">
+                  Precio: <span class="precio">$ 500 MXN</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Añadir a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1" style="width: 20rem">
+              <span class="onsale">❤️‍🔥🔥🧨</span>
+              <img
+                src="assets/img/imagens productos.img/Fotos/FRONT_fe302400-ef38-4567-9b86-d8ba888fb1d7_grande.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2>jersey Team Liquid</h2>
+                <hr class="lineah" />
+                <p class="card-text text-white-75 description">
+                  Blanco⬜🟦 / Talla Grande
                 </p>
                 <p class="card-text text-white-15 description">
                   Que no te baneen por tu look😎🥵
@@ -119,20 +246,20 @@
           </div>
           <div class="col d-flex justify-content-center mb-4">
             <div class="card shadow mb-1" style="width: 20rem">
-              <span class="onsale">🤖💗💥</span>
+              <span class="onsale">❤️‍🔥🔥🧨</span>
               <img
-                src="assets/img/imagens productos.img/Fotos/card1.jpg"
+                src="assets/img/imagens productos.img/Fotos/Jersey liquid 2021 BLACK.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h2>Hoodie Faze Clan</h2>
+                <h2>jersey Team Liquid</h2>
                 <hr class="lineah" />
                 <p class="card-text text-white-75 description">
-                  Rojo Explosivo / Talla Grande💥🎮🏹
+                  Negro⬛⬜ / Talla Grande
                 </p>
                 <p class="card-text text-white-15 description">
-                  Que no te baneen por tu look😎🥵
+                Cuando te la pones tienes hacks 🦾
                 </p>
                 <h5 class="text-white-100">
                   Precio: <span class="precio">$ 500 MXN</span>
@@ -147,104 +274,20 @@
           </div>
           <div class="col d-flex justify-content-center mb-4">
             <div class="card shadow mb-1" style="width: 20rem">
-              <span class="onsale">🤖💗💥</span>
+              <span class="onsale">❤️‍🔥🔥🧨</span>
               <img
-                src="assets/img/imagens productos.img/Fotos/card1.jpg"
+                src="assets/img/imagens productos.img/Fotos/Jersey skt t1 2022  F.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h2>Hoodie Faze Clan</h2>
+                <h2>Jersey SKT T1 e-sports</h2>
                 <hr class="lineah" />
                 <p class="card-text text-white-75 description">
-                  Rojo Explosivo / Talla Grande💥🎮🏹
+                  Negro ⬛🟥/ Talla Grande
                 </p>
                 <p class="card-text text-white-15 description">
-                  Que no te baneen por tu look😎🥵
-                </p>
-                <h5 class="text-white-100">
-                  Precio: <span class="precio">$ 500 MXN</span>
-                </h5>
-                <div class="d-grid gap-2">
-                  <button class="btn btn-primary button">
-                    Añadir a Carrito
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-center mb-4">
-            <div class="card shadow mb-1" style="width: 20rem">
-              <span class="onsale">🤖💗💥</span>
-              <img
-                src="assets/img/imagens productos.img/Fotos/card1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h2>Hoodie Faze Clan</h2>
-                <hr class="lineah" />
-                <p class="card-text text-white-75 description">
-                  Rojo Explosivo / Talla Grande💥🎮🏹
-                </p>
-                <p class="card-text text-white-15 description">
-                  Que no te baneen por tu look😎🥵
-                </p>
-                <h5 class="text-white-100">
-                  Precio: <span class="precio">$ 500 MXN</span>
-                </h5>
-                <div class="d-grid gap-2">
-                  <button class="btn btn-primary button">
-                    Añadir a Carrito
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-center mb-4">
-            <div class="card shadow mb-1" style="width: 20rem">
-              <span class="onsale">🤖💗💥</span>
-              <img
-                src="assets/img/imagens productos.img/Fotos/card1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h2>Hoodie Faze Clan</h2>
-                <hr class="lineah" />
-                <p class="card-text text-white-75 description">
-                  Rojo Explosivo / Talla Grande💥🎮🏹
-                </p>
-                <p class="card-text text-white-15 description">
-                  Que no te baneen por tu look😎🥵
-                </p>
-                <h5 class="text-white-100">
-                  Precio: <span class="precio">$ 500 MXN</span>
-                </h5>
-                <div class="d-grid gap-2">
-                  <button class="btn btn-primary button">
-                    Añadir a Carrito
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-center mb-4">
-            <div class="card shadow mb-1" style="width: 20rem">
-              <span class="onsale">🤖💗💥</span>
-              <img
-                src="assets/img/imagens productos.img/Fotos/card1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h2>Hoodie Faze Clan</h2>
-                <hr class="lineah" />
-                <p class="card-text text-white-75 description">
-                  Rojo Explosivo / Talla Grande💥🎮🏹
-                </p>
-                <p class="card-text text-white-15 description">
-                  Que no te baneen por tu look😎🥵
+                  Es la que usa el Setso Perez 🏁❤️‍🔥
                 </p>
                 <h5 class="text-white-100">
                   Precio: <span class="precio">$ 500 MXN</span>
@@ -445,7 +488,7 @@
     </div>
 
     <!-- footer -->
-    <footer class="footer text-center mt-5">
+    <footer class="footer text-center">
       <div class="footer container">
         <div class="footer row">
           <p class="footer-texto col-xs-12 col-md-9 m-auto py-1">
@@ -488,5 +531,6 @@
     ></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/validation.js"></script>
+    <script src="assets/js/carrito.js"></script>
   </body>
 </html>

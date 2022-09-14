@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap");
-html,body{
-  height: 100%;}
   body {
     background-image: linear-gradient(transparent, #4e1633);
     background-attachment: fixed;
@@ -10,7 +8,7 @@ html,body{
     font-weight: 600;
 }
 .navbar {
-  background: rgba(40, 28, 56, 0.8);
+  background: rgba(40, 28, 56);
   color: white;
   font-family: "Chakra Petch", sans-serif;
 }
@@ -20,7 +18,7 @@ html,body{
     2px -2px 0.7rem #c3083f, -2px -2px 0.7rem #c3083f;
 }
 footer.footer {
-  background: rgba(40, 28, 56, 0.8);
+  background: rgba(40, 28, 56);
   color: white;
   font-size: small;
   font-family: "Chakra Petch", sans-serif;
@@ -39,7 +37,9 @@ footer.footer {
 h2{
   text-transform: uppercase;
 }
-
+hr {
+  border: 1px solid white;
+}
 .onsale {
 
   position:absolute;
@@ -86,35 +86,6 @@ h2{
     border-color: #C3083F; 
   }
   
-  /* carrito */
-  .submenu {
-    position: relative;
-  }
-  
-  .submenu #carrito{
-    display: none;
-  }
-  .submenu:hover #carrito{
-    display: block;
-    position: absolute;
-    right:0;
-  
-    top:100%;
-    z-index: 1;
-    background-color: white;
-    padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
-  }
-  
-  ul {
-    list-style: none;}
-  
-  th{
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-    
-  } 
-  
-  
+  .card.shadow img{
+    height: 20rem ;
+      }

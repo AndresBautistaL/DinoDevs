@@ -14,7 +14,7 @@ body {
   flex-direction: column;
 }
 .navbar {
-  background: rgba(40, 28, 56, 0.8);
+  background: rgba(40, 28, 56);
   color: white;
   font-family: "Chakra Petch", sans-serif;
 }
@@ -24,7 +24,7 @@ body {
     2px -2px 0.7rem #c3083f, -2px -2px 0.7rem #c3083f;
 }
 footer.footer {
-  background: rgba(40, 28, 56, 0.8);
+  background: rgba(40, 28, 56);
   color: white;
   font-size: small;
   font-family: "Chakra Petch", sans-serif;
@@ -60,7 +60,6 @@ hr {
   max-width: 700px;
   justify-content: center;
   margin: auto;
-  height: 300;
 }
 .container.central {
   margin-left: auto;

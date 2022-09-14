@@ -43,7 +43,7 @@
     </nav>
 
     <!-- Aqui empieza  -->
-<div class="container formulario p-3 needs-validation" novalidate id="formulario">
+<div class="container formulario p-3 my-5 needs-validation" novalidate id="formulario">
   <div class="container p-2 m-1">
     <div class="dropdown ">
      <!-- primer boton -->
@@ -64,7 +64,7 @@
      <div class="form-row">
      <div class="form-group col">
      <label for="validationNombre">Nombre del producto</label>
-     <input type="text" class="form-control" id="Nombre"value="" required>
+     <input type="text" class="form-control" id="Nombre" value="" required>
    <div class="invalid-feedback">
       Escribe nombre del producto 🐱‍💻
     </div>
@@ -109,7 +109,7 @@
      </div>
      <div class="form-group col-6">
        <label for="Cantidad">Cantidad por Tallas</label>
-       <input type="text" class="form-control" id="Cantidad"value="" required>
+       <input type="text" class="form-control" id="Cantidad" value="" onkeyup="this.value=Numeros(this.value)" required>
        <div class="invalid-feedback">
       Cuanta mercancía tienes 🤑
        </div>
@@ -118,7 +118,7 @@
      <div class="form-row">
      <div class="form-group col-md-3">
      <label for="Precio">Precio</label>
-     <input type="text" class="form-control" id="Precio"value="" required>
+     <input type="text" class="form-control" id="Precio"value="" onkeyup="this.value=Numeros(this.value)" required>
      <div class="invalid-feedback">
       ¿Cuánto cuesta? 💵
     </div>
@@ -134,7 +134,7 @@
     <!-- Termina boton de agregar -->
    <!-- Boton  Enviar o cargar -->
      <div class= "form-group col-md-2">
-     <button type="submit" class="btn btn-primary" id="enviar" onclick="recibirInformarcion">Enviar</button>
+     <input type="button" class="btn btn-primary" id="enviar" value="Enviar"  onclick="recibirInformacion()">
      </div>
    <!-- Termina boton -->
      </div>
@@ -143,7 +143,7 @@
  </div>
 <!-- Termina formulario -->
 <!-- footer -->
-<footer class="footer text-center mt-5 ">
+<footer class="footer text-center mt-auto">
   <div class="footer container">
       <div class="footer row">
           <p class="footer-texto col-xs-12 col-md-9 m-auto py-1">

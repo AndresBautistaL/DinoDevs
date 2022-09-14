@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="../css/registro.css" />
+    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../css/carrito.css">
 
     <title>Epic Merch</title>
 </head>
@@ -43,6 +44,50 @@
           </ul>
         </div>
       </nav>
+
+      <div id="sidebar-container" class="justify-items-center text-center">
+        <div class="toggle-btn">
+            <span><img src="../img/cart.png" alt="carrito" class="p-1"></span>
+          </div>
+          <div id="carrito">
+            <div class="desc container col-12 mb-3">
+              <div class="descuento p-2 col-12">
+                <h6>Envío gratis a toda la República Mexicana</h6>
+              </div>
+            </div>
+                                      
+            <table id="lista-carrito " class="nombrecarrito text-white">
+                <thead>
+                    <tr>
+                      <th>IMAGEN</th>
+                      <th>NOMBRE</th>
+                      <th>CANTIDAD</th>
+                      <th>PRECIO</th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+            </table>
+    
+            <a href="#" id="vaciar-carrito" class="button nombrecarrito text-white p-3">Vaciar Carrito</a>
+            <div class="col m-auto">
+       
+              <button class="btn btn-primary button-checkout m-3">Checkout</button>
+            </div>
+    </div>
+    <template id="template-carrito">
+      <tr>
+        <th scope="row" class="col-2">
+          <img src="" width="50px" height="50px">
+        </th>
+        <td class="col-6">Café</td>
+        <td class="col-2">1</td>
+        <td class="col-2">$<span>500</span></td> 
+        <div class="col-12"><hr></div>
+      </tr>
+    
+    </template>
+      </div>
+      
 
     <div class="container registro p-3" id="formularioRegistro">
         <div class="col m-auto">
@@ -170,6 +215,7 @@
         crossorigin="anonymous"></script>
     <script src="../js/validation.js"></script>
     <script src="../js/registro.js"></script>
+    <script src="../js/carrito.js"></script>
 </body>
 
 </html>

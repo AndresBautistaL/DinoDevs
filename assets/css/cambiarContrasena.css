@@ -19,7 +19,7 @@ body {
 
 /* estilos navbar */
 .navbar {
-  background: rgba(40, 28, 56, 0.8);
+  background: rgba(40, 28, 56);
   color: white;
   font-family: "Chakra Petch", sans-serif;
 }
@@ -35,7 +35,7 @@ hr {
 
 /* estilos footer */
 footer.footer {
-  background: rgba(40, 28, 56, 0.8);
+  background: rgba(40, 28, 56);
   color: white;
   font-size: small;
   font-family: "Chakra Petch", sans-serif;
