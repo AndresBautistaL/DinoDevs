@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Chakra+Petch:wght@700&display=swap");
-html,body{
-    height: 100%;}
 body {
   background-image: linear-gradient(transparent, #4e1633);
   background-attachment: fixed;
@@ -29,10 +27,10 @@ body {
   max-height: 100vh;
   text-shadow: #130b1a;
   background: rgba(28, 12, 49, 0.8);
-  background-image: url("../img/EpicMerch.gif");
+  background-image: url("../img/Jumbotron.gif");
   /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/09677898135819.5ed81af4d6f2a.gif"); */
-  background-attachment: fixed;
-  background-position: bottom;
+  
+  background-position: top;
   background-size: cover;
 }
 .texto-jumbo {
@@ -115,7 +113,7 @@ u{
   margin-right: auto;
 }
 footer.footer {
-  background: rgba(40, 28, 56, 0.8);
+  background: rgba(40, 28, 56);
   color: white;
   font-size: small;
   font-family: "Chakra Petch", sans-serif;

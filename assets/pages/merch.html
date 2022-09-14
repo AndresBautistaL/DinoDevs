@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <link rel="stylesheet" href="../../assets/css/merch.css">
+<link rel="stylesheet" href="../css/carrito.css">
 
     <title>Merch</title>
   </head>
@@ -39,37 +40,56 @@
           <li class="nav-item">
               <a class="nav-link" href="../pages/login.html">LOGIN</a>
             </li>
-            <div class="two columns u-pull-right">
-              <ul>
-                  <li class="submenu">
-                          <img src="../img/cart.png" id="img-carrito">
-                          <div id="carrito">
-                                  
-                                  <table id="lista-carrito " class="nombrecarrito text-primary ">
-                                      <thead>
-                                          <tr>
-                                              <th>Imagen</th>
-                                              <th>Nombre</th>
-                                              <th>Precio</th>
-                                              <th>Cantidad</th>
-                                              <th></th>
-                                          </tr>
-                                      </thead>
-                                      <tbody></tbody>
-                                  </table>
-    
-                                  <a href="#" id="vaciar-carrito" class="button nombrecarrito">Vaciar Carrito</a>
-                          </div>
-                  </li>
-              </ul>
-          </div>
         </ul>
       </div>
     </nav>
+    
+  <!-- Carrito -->
 
+  <div id="sidebar-container" class="justify-items-center text-center">
+    <div class="toggle-btn">
+        <span><img src="../img/cart.png" alt="carrito" class="p-1"></span>
+      </div>
+      <div id="carrito">
+        <div class="desc container col-12 mb-3">
+          <div class="descuento p-2 col-12">
+            <h6>Envío gratis a toda la República Mexicana</h6>
+          </div>
+        </div>
+                                  
+        <table id="lista-carrito " class="nombrecarrito text-white">
+            <thead>
+                <tr>
+                  <th>IMAGEN</th>
+                  <th>NOMBRE</th>
+                  <th>CANTIDAD</th>
+                  <th>PRECIO</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+        </table>
+
+        <a href="#" id="vaciar-carrito" class="button nombrecarrito text-white p-3">Vaciar Carrito</a>
+        <div class="col m-auto">
+   
+          <button class="btn btn-primary button-checkout m-3">Checkout</button>
+        </div>
+</div>
+<template id="template-carrito">
+  <tr>
+    <th scope="row" class="col-2">
+      <img src="" width="50px" height="50px">
+    </th>
+    <td class="col-6">Café</td>
+    <td class="col-2">1</td>
+    <td class="col-2">$<span>500</span></td> 
+    <div class="col-12"><hr></div>
+  </tr>
+
+</template>
+  </div>
+  
   <!-- Botones -->
-
- 
   <div class="contenedor-filtro m-4 p-1">
   
     <!-- BOTON TIPO DE PRENDA -->
@@ -114,166 +134,248 @@
    <!-- Cards Jerseys-->
    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4  m-auto">
    
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">Rojo Explosivo / Talla Grande💥🎮🏹</p>
-           <p class="card-text text-white-15 description"> Que no te baneen por tu look😎🥵</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-   
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Hoodie Faze Clan</H2>
+          <hr class="lineah" >Super Hoodie, Rojo Explosivo 💥🎮🏹
+ 
+          <p class="card-text text-white-75 description"> Composición algodón 100%
+           Cuerpo de tejido suave que ofrece comodidad y un corte ligero.
+           😎🥵</p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
+          <div class="d-grid gap-2">
+  
+          <button class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 2 CARD -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/11.jersey g2 2021 front.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Jersey G2 2021</H2>
+          <hr class="lineah">Super Jersey,Color negro Elegante
+          <p class="card-text text-white-75 description">¡Composición: 100% Poliéster
+            Modelo:Slim Fit, Manga: Corta Cuello: Redondo
+           !💥💥💥</p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 50 MXN</span></h5>
+          <div class="d-grid gap-2">
+           <!-- otro carrito que no -->
+            <!-- <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a> -->
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 3 CARD -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/12.Sudadera FNATIC 2021.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Hoodie Fnatic 2021</H2>
+          <hr class="lineah">
+          <p class="card-text text-white-75 description">¡Super Hoddie,Color negro Elegante!
+           Composición algodón 100%
+           Cuerpo de tejido suave que ofrece comodidad y un corte ligero.
+           😎🥵
+          </p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+  <!--   CARD 4 -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/13.Jersey skt t1 2021 W F ML.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Jersey SKT T1 2021</H2>
+          <hr class="lineah">
+          <p class="card-text text-white-75 description">¡Super Jersey,Color Blanco!
+           Composición: Elástico Látex
+           Modelo:
+           Hilos de gramaje doble y alta resistencia
+           Manga: corta ajustable
+           
+          </p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CARD 5 -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/15.Playera manga larga g2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Playera Manga Larga G2</H2>
+          <hr class="lineah">
+          <p class="card-text text-white-75 description">¡Super Playera,Manga Larga Color Negro!Composición algodón 50% y poliéster 50%
+           Manga larga con capucha y cangurera
+           
+           </p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 320 MXN</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+   <!--  CARD 6 -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/16.Sudadera T1 blanca rojo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Hoodie T1 Blanca</H2>
+          <hr class="lineah">
+          <p class="card-text text-white-75 description">¡Super Hoddie,Color Blanca ¡Super Hoddie,Color negro Elegante!
+           Composición algodón 100%
+           Cuerpo de tejido suave que ofrece comodidad y un corte ligero.</p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CARD 7 -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/17.Jersey TSM 2021 ML F.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Jersey TSM 2021</H2>
+          <hr class="lineah">
+          <p class="card-text text-white-75 description">¡Super Jersey,Color Negro!Composición: 100% Poliéster
+           Modelo:Slim Fit
+           Manga: Corta Cuello: Redondo
+           </p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CARD 8 -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/18..png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Hoodie Warzone Gula Gang</H2>
+          <hr class="lineah">
+          <p class="card-text text-white-75 description">¡Super Hoddie,Color Gris!Composición algodón 100%
+           Cuerpo de tejido suave que ofrece comodidad y un corte ligero.
+           😎🥵</p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+ <!--    CARD 9      -->
+    <div class="col d-flex justify-content-center mb-4 ">
+      <div class="card shadow mb-1 " style="width: 20rem;">
+       <span class="onsale">🤖💗💥</span>
+        <img src="../../assets/img/imagens productos.img/Fotos/19.Playera G2 ROJA FRONT.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <H2>Playera G2 Roja Front </H2>
+          <hr class="lineah">
+          <p class="card-text text-white-75 description">¡Super Playera,Color Rojo y Azul Cuerpo de tejido suave que ofrece comodidad y un corte ligero
+           Manga: corta</p>
+          <h5 class="text-white-100">Precio: <span class="precio">$ 320 MXN</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+ <!-- CARD 10 -->
+    <div class="col d-flex justify-content-center mb-4 ">
+     <div class="card shadow mb-1 " style="width: 20rem;">
+      <span class="onsale">🤖💗💥</span>
+       <img src="../../assets/img/imagens productos.img/Fotos/20.Sudadera 100 thieves.jpg" class="card-img-top" alt="...">
+       <div class="card-body">
+         <H2>Hoodie 100 Thieves </H2>
+         <hr class="lineah">
+         <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Negro!
+           omposición algodón 100%
+           Cuerpo de tejido suave que ofrece comodidad y un corte ligero.
+         </p>
+         <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+         <div class="d-grid gap-2">
+         <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+       </div>
        </div>
      </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-            <!-- otro carrito que no -->
-             <!-- <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a> -->
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-     
-     <div class="col d-flex justify-content-center mb-4 ">
-       <div class="card shadow mb-1 " style="width: 20rem;">
-        <span class="onsale">🤖💗💥</span>
-         <img src="../../assets/img/imagens productos.img/Fotos/card1.jpg" class="card-img-top" alt="...">
-         <div class="card-body">
-           <H2>Hoodie Faze Clan</H2>
-           <hr class="lineah">
-           <p class="card-text text-white-75 description">¡Super Hoddie,Color rojo Explosivo!💥💥💥</p>
-           <h5 class="text-white-100">Precio: <span class="precio">$ 500 MXN</span></h5>
-           <div class="d-grid gap-2">
-           <button  class="btn btn-primary button">Añadir a Carrito</button>
-         </div>
-         </div>
-       </div>
-     </div>
-     
-   
-   
-   
    </div>
+<!-- CARD 11 -->
+   <div class="col d-flex justify-content-center mb-4 ">
+     <div class="card shadow mb-1 " style="width: 20rem;">
+      <span class="onsale">🤖💗💥</span>
+       <img src="../../assets/img/imagens productos.img/Fotos/22.Jersey cloud 9 2021 blanca f sp.jpg" class="card-img-top" alt="...">
+       <div class="card-body">
+         <H2>Jersey Cloud 9 2021</H2>
+         <hr class="lineah">
+         <p class="card-text text-white-75 description">¡Super Jersey,Color Blanco!💥💥💥
+           Composición: 100% Poliéster
+           Modelo:Slim Fit
+           Manga: Corta Cuello: Redondo
+         </p>
+         <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+         <div class="d-grid gap-2">
+         <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+       </div>
+       </div>
+     </div>
+   </div>
+<!-- CARD 12 -->
+   <div class="col d-flex justify-content-center mb-4 ">
+     <div class="card shadow mb-1 " style="width: 20rem;">
+      <span class="onsale">🤖💗💥</span>
+       <img src="../../assets/img/imagens productos.img/Fotos/23.Jersey TSM 2022 B.jpg" class="card-img-top" alt="...">
+       <div class="card-body">
+         <H2>Jersey TSM 2022 B </H2>
+         <hr class="lineah">
+         <p class="card-text text-white-75 description">¡Super Jersey Color Negro y Blanco!Composición: 100% Poliéster
+           Modelo:Slim Fit
+           Manga: Corta Cuello: Redondo</p>
+         <h5 class="text-white-100">Precio: <span class="precio">$ 550 MXN</span></h5>
+         <div class="d-grid gap-2">
+         <button  class="btn btn-primary button aniadirButton">Añadir a Carrito</button>
+       </div>
+       </div>
+     </div>
+   </div>
+    
+  
+  
+  
+  </div>
    
 
 
@@ -301,7 +403,7 @@
   </div>
 </footer>
 
-
+<script src="../js/carrito.js"></script>
 <script src="../js/merch.js"></script>
 
 
