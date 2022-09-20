@@ -11,34 +11,34 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.epicmerch.fgm.models.ClientesModel;
-import com.epicmerch.fgm.repositories.UsuarioRepository;
+import com.epicmerch.fgm.models.ClienteModel;
+import com.epicmerch.fgm.repositories.ClienteRepository;
 
 @Service
 public class ClientesService implements UserDetailsService{
 
 	@Autowired
-	private  UsuarioRepository usuarioRepository;
+	private  ClienteRepository clienteRepository;
 	
-	public ArrayList<ClientesModel> obtenerUsuario(){
-		return (ArrayList<ClientesModel>) usuarioRepository.findAll();
+	public ArrayList<ClienteModel> obtenerUsuario(){
+		return (ArrayList<ClienteModel>) clienteRepository.findAll();
     }
 	
 	//obtener usuario por id
-	public ClientesModel obtenerUsuario(Long id) {
-		Optional<ClientesModel> user = usuarioRepository.findById(id);
+	public ClienteModel obtenerUsuario(Long id) {
+		Optional<ClienteModel> user = clienteRepository.findById(id);
 		return user.orElse(null);
 	}
 	
-	public ClientesModel guardarUsuario(ClientesModel usuario){
-        return usuarioRepository.save(usuario);
+	public ClienteModel guardarUsuario(ClienteModel usuario){
+        return clienteRepository.save(usuario);
     }
 
 	
 	// eliminar
 	public boolean eliminar(Long id) {
         try{
-            usuarioRepository.deleteById(id);
+            clienteRepository.deleteById(id);
             return true;
         }catch(Exception err){
             return false;
@@ -47,23 +47,23 @@ public class ClientesService implements UserDetailsService{
 
 
 	//actualizar
-	public ClientesModel actualizar(ClientesModel usuarioModel) {
-		return usuarioRepository.save(usuarioModel);
+	public ClienteModel actualizar(ClienteModel usuarioModel) {
+		return clienteRepository.save(usuarioModel);
 	}
 	
 	//buscar por prioridad
-	public ArrayList<ClientesModel> obtenerPorPrioridad(Integer prioridad) {
-		return usuarioRepository.findByPrioridad(prioridad);
+	public ArrayList<ClienteModel> obtenerPorPrioridad(Integer prioridad) {
+		return clienteRepository.findByPrioridad(prioridad);
 	}
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		ClientesModel user = usuarioRepository.findByNombre(username);
+		ClienteModel user = clienteRepository.findByNombre(username);
 		if(user == null) {
             throw new UsernameNotFoundException(username);
         }
-        return new org.springframework.security.core.userdetails.User(user.getNombre(), user.getPassword(), emptyList());
+        return new org.springframework.security.core.userdetails.User(user.getNombre(), user.getContrasena(), emptyList());
 	}
 
 	}

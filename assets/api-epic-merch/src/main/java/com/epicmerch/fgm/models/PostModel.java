@@ -23,7 +23,7 @@ public class PostModel {
 	    @ManyToOne
 	    @JoinColumn(nullable = false, name = "direccion")
 	    @JsonProperty(access = Access.WRITE_ONLY)
-	    private ClientesModel user;
+	    private ClienteModel user;
 
 		public Long getId() {
 			return id;
@@ -49,11 +49,11 @@ public class PostModel {
 			this.content = content;
 		}
 
-		public ClientesModel getUser() {
+		public ClienteModel getUser() {
 			return user;
 		}
 
-		public void setUser(ClientesModel user) {
+		public void setUser(ClienteModel user) {
 			this.user = user;
 		}
 	    
