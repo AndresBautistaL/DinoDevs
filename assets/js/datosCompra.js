@@ -22,7 +22,7 @@ function Card(event, el) {//Validar nombre
     el.value = out;
 
     //En caso de modificar un numero reposicionar el cursor
-    if (event.keyCode == 8) {//Tecla borrar precionada
+    if (event.keyCode == 8) {//Tecla borrar presionada
         el.selectionStart = pos;
         el.selectionEnd = pos;
     }
