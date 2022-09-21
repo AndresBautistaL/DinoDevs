@@ -8,29 +8,34 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "clientes")
-public class ClientesModel {
+public class ClienteModel {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(nullable = false)
 	private Long cliente_id;
+	
 	@Column(nullable = false)
 	private String nombre;
+	
 	@Column(nullable = false)
 	private String apellido;
+	
 	@Column(nullable = false)
 	private String correo_electronico;
+	
 	@Column(nullable = false)
 	private String contrasena;
 
-	
-	@OneToMany(mappedBy = "direccion")
+	//se debe corresponder a un ManyToOne y el mappedBy debe ser el nombre del objeto con JoinColumn
+	@OneToMany(mappedBy = "cliente")
     private List<DireccionModel> direcciones;
 	
-	@OneToMany(mappedBy = "compras")
-    private List<ComprasModel> compras;
+	@OneToMany(mappedBy = "cliente")
+    private List<CompraModel> compras;
 	
-	/*@OneToMany(mappedBy = "pagos")
-    private List<PagosModel> metodos_de_pago;*/
+	@OneToMany(mappedBy = "cliente")
+    private List<MetodoPagoModel> metodosDePago;
 
 	public Long getCliente_id() {
 		return cliente_id;
@@ -80,21 +85,23 @@ public class ClientesModel {
 		this.direcciones = direcciones;
 	}
 
-	public List<ComprasModel> getCompras() {
+	public List<CompraModel> getCompras() {
 		return compras;
 	}
 
-	public void setCompras(List<ComprasModel> compras) {
+	public void setCompras(List<CompraModel> compras) {
 		this.compras = compras;
 	}
 
-	/*public List<PagosModel> getMetodos_de_pago() {
-		return metodos_de_pago;
+	public List<MetodoPagoModel> getMetodosDePago() {
+		return metodosDePago;
 	}
 
-	public void setMetodos_de_pago(List<PagosModel> metodos_de_pago) {
-		this.metodos_de_pago = metodos_de_pago;*/
+	public void setMetodosDePago(List<MetodoPagoModel> metodosDePago) {
+		this.metodosDePago = metodosDePago;
 	}
+
+}
 	
 	
 	
