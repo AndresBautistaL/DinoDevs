@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.generation.mvc'
+group = 'com.epicmerch.fgm'
 version = '0.0.1'
 sourceCompatibility = '11'
 
