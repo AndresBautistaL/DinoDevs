@@ -1,8 +1,5 @@
 package com.epicmerch.fgm.security;
 
-import static com.epicmerch.fgm.security.Constants.HEADER_AUTHORIZACION_KEY;
-import static com.epicmerch.fgm.security.Constants.LOGIN_URL;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -16,6 +13,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import static com.epicmerch.fgm.security.Constanst.HEADER_AUTHORIZACION_KEY;
+import static com.epicmerch.fgm.security.Constanst.LOGIN_URL;
 
 @Configuration
 @EnableWebSecurity
@@ -36,9 +36,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         /*
          * 1. Se desactiva el uso de cookies
-         * 2. Se activa la configuraci�n CORS con los valores por defecto
+         * 2. Se activa la configuraciÃ³n CORS con los valores por defecto
          * 3. Se desactiva el filtro CSRF
-         * 4. Se indica que el login no requiere autenticaci�n
+         * 4. Se indica que el login no requiere autenticaciÃ³n
          * 5. Se indica que el resto de URLs esten securizadas
          */
         httpSecurity
@@ -46,8 +46,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .cors().and()
                 .csrf().disable()
                 .authorizeRequests().antMatchers(HttpMethod.POST, LOGIN_URL).permitAll()
-                .antMatchers(HttpMethod.POST, "/usuario").permitAll()
-                .antMatchers(HttpMethod.POST, "/post").permitAll() 
+                .antMatchers(HttpMethod.POST, "/*").permitAll()
+                .antMatchers(HttpMethod.GET, "/*").permitAll()
                 .antMatchers(HttpMethod.GET, "/").permitAll()
                 .anyRequest().authenticated().and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))

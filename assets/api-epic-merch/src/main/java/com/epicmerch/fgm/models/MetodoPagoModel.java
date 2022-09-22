@@ -1,5 +1,7 @@
 package com.epicmerch.fgm.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 @Entity
 @Table(name = "metodos_de_pago")
@@ -39,80 +44,86 @@ public class MetodoPagoModel {
     @Column(name = "cvv")
     private String cvv;
 
-    @ManyToOne
-    @JoinColumn(name = "cliente_id")
-    private ClienteModel cliente;
-
-    public Long getMetodoPagoId() {
-        return metodoPagoId;
-    }
-
-    public void setMetodoPagoId(Long metodoPagoId) {
-        this.metodoPagoId = metodoPagoId;
-    }
-
-    public String getFormaDePago() {
-        return formaDePago;
-    }
+  /*  @ManyToOne
+    @JoinColumn(nullable = false, name = "cliente_id")
+    private ClienteModel clientePago;*/
     
-    public void setFormaDePago(String formaDePago) {
-        this.formaDePago = formaDePago;
-    }
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "cliente_id")
+    @JsonProperty(access = Access.WRITE_ONLY)
+    private ClienteModel clientePago;
 
-    public String getEntidadFinanciera() {
-        return entidadFinanciera;
-    }
+	public Long getMetodoPagoId() {
+		return metodoPagoId;
+	}
 
-    public void setEntidadFinanciera(String entidadFinanciera) {
-        this.entidadFinanciera = entidadFinanciera;
-    }
+	public void setMetodoPagoId(Long metodoPagoId) {
+		this.metodoPagoId = metodoPagoId;
+	}
 
-    public String getNombreTitular() {
-        return nombreTitular;
-    }
+	public String getFormaDePago() {
+		return formaDePago;
+	}
 
-    public void setNombreTitular(String nombreTitular) {
-        this.nombreTitular = nombreTitular;
-    }
+	public void setFormaDePago(String formaDePago) {
+		this.formaDePago = formaDePago;
+	}
 
-    public String getNumeroDeTarjera() {
-        return numeroDeTarjera;
-    }
+	public String getEntidadFinanciera() {
+		return entidadFinanciera;
+	}
 
-    public void setNumeroDeTarjera(String numeroDeTarjera) {
-        this.numeroDeTarjera = numeroDeTarjera;
-    }
+	public void setEntidadFinanciera(String entidadFinanciera) {
+		this.entidadFinanciera = entidadFinanciera;
+	}
 
-    public String getMesTarjeta() {
-        return mesTarjeta;
-    }
+	public String getNombreTitular() {
+		return nombreTitular;
+	}
 
-    public void setMesTarjeta(String mesTarjeta) {
-        this.mesTarjeta = mesTarjeta;
-    }
+	public void setNombreTitular(String nombreTitular) {
+		this.nombreTitular = nombreTitular;
+	}
 
-    public String getAnioTarjeta() {
-        return anioTarjeta;
-    }
+	public String getNumeroDeTarjera() {
+		return numeroDeTarjera;
+	}
 
-    public void setAnioTarjeta(String anioTarjeta) {
-        this.anioTarjeta = anioTarjeta;
-    }
+	public void setNumeroDeTarjera(String numeroDeTarjera) {
+		this.numeroDeTarjera = numeroDeTarjera;
+	}
 
-    public String getCvv() {
-        return cvv;
-    }
+	public String getMesTarjeta() {
+		return mesTarjeta;
+	}
 
-    public void setCvv(String cvv) {
-        this.cvv = cvv;
-    }
+	public void setMesTarjeta(String mesTarjeta) {
+		this.mesTarjeta = mesTarjeta;
+	}
 
-    public ClienteModel getCliente() {
-        return cliente;
-    }
+	public String getAnioTarjeta() {
+		return anioTarjeta;
+	}
 
-    public void setCliente(ClienteModel cliente) {
-        this.cliente = cliente;
-    }
+	public void setAnioTarjeta(String anioTarjeta) {
+		this.anioTarjeta = anioTarjeta;
+	}
+
+	public String getCvv() {
+		return cvv;
+	}
+
+	public void setCvv(String cvv) {
+		this.cvv = cvv;
+	}
+
+	public ClienteModel getClientePago() {
+		return clientePago;
+	}
+
+	public void setClientePago(ClienteModel clientePago) {
+		this.clientePago = clientePago;
+	}
+
 
 }

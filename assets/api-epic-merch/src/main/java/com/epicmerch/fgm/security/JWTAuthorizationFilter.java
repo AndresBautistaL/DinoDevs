@@ -10,11 +10,10 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import static com.epicmerch.fgm.security.Constants.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
+
+import static com.epicmerch.fgm.security.Constanst.*;
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 
