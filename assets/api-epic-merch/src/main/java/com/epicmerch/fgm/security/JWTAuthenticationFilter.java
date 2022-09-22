@@ -2,7 +2,7 @@ package com.epicmerch.fgm.security;
 
 import com.epicmerch.fgm.models.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+import com.epicmerch.fgm.models.*;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,12 +15,11 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import static com.epicmerch.fgm.security.Constants.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+
+import static com.epicmerch.fgm.security.Constanst.*;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private AuthenticationManager authenticationManager;

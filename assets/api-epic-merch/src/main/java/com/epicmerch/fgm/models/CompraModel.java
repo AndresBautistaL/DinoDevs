@@ -20,7 +20,8 @@ public class CompraModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long compra_id;
+    @Column(name = "compra_id")
+	private Long compraId;
 
     @Column(name = "cantidad_productos")
     private Integer cantidadProductos;
@@ -32,8 +33,8 @@ public class CompraModel {
     private String estatusEnvio;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
-    private ClienteModel cliente;
+    @JoinColumn(name = "cliente_id")  
+    private ClienteModel clienteCompra;
 
     @ManyToMany
     @JoinTable(name = "adquisiciones",
@@ -41,53 +42,54 @@ public class CompraModel {
         inverseJoinColumns = @JoinColumn(name="producto_id"))
     private List<ProductoModel> productos = new ArrayList<>();
 
+	public Long getCompraId() {
+		return compraId;
+	}
 
-    public Long getCompra_id() {
-        return compra_id;
-    }
+	public void setCompraId(Long compraId) {
+		this.compraId = compraId;
+	}
 
-    public void setCompra_id(Long compra_id) {
-        this.compra_id = compra_id;
-    }
+	public Integer getCantidadProductos() {
+		return cantidadProductos;
+	}
 
-    public Integer getCantidadProductos() {
-        return cantidadProductos;
-    }
+	public void setCantidadProductos(Integer cantidadProductos) {
+		this.cantidadProductos = cantidadProductos;
+	}
 
-    public void setCantidadProductos(Integer cantidadProductos) {
-        this.cantidadProductos = cantidadProductos;
-    }
+	public Double getMontoTotal() {
+		return montoTotal;
+	}
 
-    public Double getMontoTotal() {
-        return montoTotal;
-    }
+	public void setMontoTotal(Double montoTotal) {
+		this.montoTotal = montoTotal;
+	}
 
-    public void setMontoTotal(Double montoTotal) {
-        this.montoTotal = montoTotal;
-    }
+	public String getEstatusEnvio() {
+		return estatusEnvio;
+	}
 
-    public String getEstatusEnvio() {
-        return estatusEnvio;
-    }
-    
-    public void setEstatusEnvio(String estatusEnvio) {
-        this.estatusEnvio = estatusEnvio;
-    }
+	public void setEstatusEnvio(String estatusEnvio) {
+		this.estatusEnvio = estatusEnvio;
+	}
 
-    public ClienteModel getCliente() {
-        return cliente;
-    }
 
-    public void setCliente(ClienteModel cliente) {
-        this.cliente = cliente;
-    }
 
-    public List<ProductoModel> getProductos() {
-        return productos;
-    }
+	public ClienteModel getClienteCompra() {
+		return clienteCompra;
+	}
 
-    public void setProductos(List<ProductoModel> productos) {
-        this.productos = productos;
-    }
+	public void setClienteCompra(ClienteModel clienteCompra) {
+		this.clienteCompra = clienteCompra;
+	}
+
+	public List<ProductoModel> getProductos() {
+		return productos;
+	}
+
+	public void setProductos(List<ProductoModel> productos) {
+		this.productos = productos;
+	}
 
 }

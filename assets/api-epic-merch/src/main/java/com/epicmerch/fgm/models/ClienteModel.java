@@ -12,8 +12,8 @@ public class ClienteModel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(nullable = false)
-	private Long cliente_id;
+	@Column(name = "cliente_id", nullable = false)
+	private Long clienteId;
 	
 	@Column(nullable = false)
 	private String nombre;
@@ -21,28 +21,29 @@ public class ClienteModel {
 	@Column(nullable = false)
 	private String apellido;
 	
-	@Column(nullable = false)
-	private String correo_electronico;
+
+    @Column(name = "correo_electronico", nullable = false)
+	private String correoElectronico;
 	
 	@Column(nullable = false)
 	private String contrasena;
 
 	//se debe corresponder a un ManyToOne y el mappedBy debe ser el nombre del objeto con JoinColumn
-	@OneToMany(mappedBy = "cliente")
+	@OneToMany(mappedBy = "clienteDireccion")
     private List<DireccionModel> direcciones;
 	
-	@OneToMany(mappedBy = "cliente")
+	@OneToMany(mappedBy = "clienteCompra")
     private List<CompraModel> compras;
 	
-	@OneToMany(mappedBy = "cliente")
-    private List<MetodoPagoModel> metodosDePago;
+	@OneToMany(mappedBy = "clientePago")
+    private List<MetodoPagoModel> metodoPago;
 
-	public Long getCliente_id() {
-		return cliente_id;
+	public Long getClienteId() {
+		return clienteId;
 	}
 
-	public void setCliente_id(Long cliente_id) {
-		this.cliente_id = cliente_id;
+	public void setClienteId(Long clienteId) {
+		this.clienteId = clienteId;
 	}
 
 	public String getNombre() {
@@ -61,12 +62,12 @@ public class ClienteModel {
 		this.apellido = apellido;
 	}
 
-	public String getCorreo_electronico() {
-		return correo_electronico;
+	public String getCorreoElectronico() {
+		return correoElectronico;
 	}
 
-	public void setCorreo_electronico(String correo_electronico) {
-		this.correo_electronico = correo_electronico;
+	public void setCorreoElectronico(String correoElectronico) {
+		this.correoElectronico = correoElectronico;
 	}
 
 	public String getContrasena() {
@@ -93,13 +94,15 @@ public class ClienteModel {
 		this.compras = compras;
 	}
 
-	public List<MetodoPagoModel> getMetodosDePago() {
-		return metodosDePago;
+	public List<MetodoPagoModel> getMetodoPago() {
+		return metodoPago;
 	}
 
-	public void setMetodosDePago(List<MetodoPagoModel> metodosDePago) {
-		this.metodosDePago = metodosDePago;
+	public void setMetodoPago(List<MetodoPagoModel> metodoPago) {
+		this.metodoPago = metodoPago;
 	}
+
+
 
 }
 	

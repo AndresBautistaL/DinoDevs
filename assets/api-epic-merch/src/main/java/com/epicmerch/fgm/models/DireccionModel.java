@@ -10,7 +10,8 @@ public class DireccionModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer direccion_id;
+	@Column(name = "direccion_id", nullable = false)
+	private Integer direccionId;
 	@Column(nullable = false)
 	private String nombre;
 	@Column(nullable = false)
@@ -32,18 +33,20 @@ public class DireccionModel {
 	@Column(nullable = false)
 	private String referencias;
 	
-	// Llave foranea
 	@ManyToOne //se debe corresponder con el OneToMany en Clientes  
-	@JoinColumn(nullable = false, name = "client")
+	@JoinColumn(nullable = false, name = "cliente_id")
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	private ClienteModel cliente; //este nombre debe estar en el OneToMany en mappedBy
+	private ClienteModel clienteDireccion; 
 
-	public Integer getDireccion_id() {
-		return direccion_id;
+	/*
+	 @JoinColumn(name = "cliente_id", foreignKey = @ForeignKey(name = "cliente_id", value =ConstraintMode.CONSTRAINT))
+*/
+	public Integer getDireccionId() {
+		return direccionId;
 	}
 
-	public void setDireccion_id(Integer direccion_id) {
-		this.direccion_id = direccion_id;
+	public void setDireccionId(Integer direccionId) {
+		this.direccionId = direccionId;
 	}
 
 	public String getNombre() {
@@ -126,15 +129,13 @@ public class DireccionModel {
 		this.referencias = referencias;
 	}
 
-	public ClienteModel getCliente() {
-		return cliente;
+	public ClienteModel getClienteDireccion() {
+		return clienteDireccion;
 	}
 
-	public void setCliente(ClienteModel cliente) {
-		this.cliente = cliente;
+	public void setClienteDireccion(ClienteModel clienteDireccion) {
+		this.clienteDireccion = clienteDireccion;
 	}
 
 	
-
-
 }

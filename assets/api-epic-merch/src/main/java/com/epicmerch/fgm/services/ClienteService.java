@@ -15,7 +15,7 @@ import com.epicmerch.fgm.models.ClienteModel;
 import com.epicmerch.fgm.repositories.ClienteRepository;
 
 @Service
-public class ClientesService implements UserDetailsService{
+public class ClienteService implements UserDetailsService{
 
 	@Autowired
 	private  ClienteRepository clienteRepository;
@@ -49,11 +49,6 @@ public class ClientesService implements UserDetailsService{
 	//actualizar
 	public ClienteModel actualizar(ClienteModel usuarioModel) {
 		return clienteRepository.save(usuarioModel);
-	}
-	
-	//buscar por prioridad
-	public ArrayList<ClienteModel> obtenerPorPrioridad(Integer prioridad) {
-		return clienteRepository.findByPrioridad(prioridad);
 	}
 
 	@Override

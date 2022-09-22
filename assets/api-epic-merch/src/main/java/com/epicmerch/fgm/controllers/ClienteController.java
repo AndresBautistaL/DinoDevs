@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.epicmerch.fgm.models.ClienteModel;
-import com.epicmerch.fgm.services.ClientesService;
+import com.epicmerch.fgm.services.ClienteService;
 
 
 @RestController
 @RequestMapping("/clientes")
-public class ClientesController {
+public class ClienteController {
 
 	@Autowired
-	ClientesService clienteService;
+	ClienteService clienteService;
 	
 	//obtener todos los usuarios
 	@GetMapping() // http://localhost:8080/usuario
@@ -26,13 +26,6 @@ public class ClientesController {
 	public ClienteModel getProducto(@PathVariable Long id) {
 		return clienteService.obtenerUsuario(id);
 	}
-	
-	//Buscar por prioridad   
-	@GetMapping("/query")  // http://localhost:8080/usuario/query?prioridad=4
-	public ArrayList<ClienteModel> obtenerUsuarioPorPrioridad(@RequestParam("prioridad") Integer prioridad){
-        return this.clienteService.obtenerPorPrioridad(prioridad);
-    }
-
 	
 	@PostMapping()  // http://localhost:8080/usuario
 	public ClienteModel guardarUsuario(@RequestBody ClienteModel usuario){
