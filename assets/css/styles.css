@@ -73,6 +73,11 @@ u{
 .card {
   background-color: #281c38;
 }
+
+.form-check-label{
+  color:#c3083f
+}
+
 .onsale {
 
   position:absolute;
