@@ -63,11 +63,11 @@ hr {
       background-color: #d64671;
       box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
       }
-      .btn:not(:disabled):not(:disabled):active:{
+      /* .btn:not(:disabled):not(:disabled):active:{
         border: none;
         background-color: #d64671;
         box-shadow: 0 0 0.5rem 0.2rem rgba(195, 8, 63, 0.9);
-        }
+        } */
         .btn:focus{
           border: none;
           background:#d64671;
@@ -79,9 +79,16 @@ hr {
   .dropdown {
     margin: 90px;
     max-width: max-content;
+    
   
   }
   
+  .form-check-label{
+    color:#c3083f
+  }
+
+
+
   .lineah{
     border-color: #C3083F; 
   }
