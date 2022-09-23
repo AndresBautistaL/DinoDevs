@@ -44,7 +44,10 @@ public class ProductoModel {
     private Double precio;
 
     @Column(name = "descripcion")
-    private Integer descripcion;
+    private String descripcion;
+    
+    @Column(name = "imagen")
+    private String imagen;
 
     @ManyToMany(mappedBy = "productos")
     private List<CompraModel> compras = new ArrayList<>();
@@ -121,20 +124,30 @@ public class ProductoModel {
         this.precio = precio;
     }
 
-    public Integer getDescripcion() {
-        return descripcion;
-    }
+   
 
-    public void setDescripcion(Integer descripcion) {
-        this.descripcion = descripcion;
-    }
+    public String getDescripcion() {
+		return descripcion;
+	}
 
-    public List<CompraModel> getCompras() {
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public List<CompraModel> getCompras() {
         return compras;
     }
 
     public void setCompras(List<CompraModel> compras) {
         this.compras = compras;
     }
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
 
 }

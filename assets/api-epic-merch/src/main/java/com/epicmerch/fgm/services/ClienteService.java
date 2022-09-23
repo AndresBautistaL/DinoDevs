@@ -54,11 +54,11 @@ public class ClienteService implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		ClienteModel user = clienteRepository.findByNombre(username);
+		ClienteModel user = clienteRepository.findByCorreoElectronico(username);
 		if(user == null) {
             throw new UsernameNotFoundException(username);
         }
-        return new org.springframework.security.core.userdetails.User(user.getNombre(), user.getContrasena(), emptyList());
+        return new org.springframework.security.core.userdetails.User(user.getCorreoElectronico(), user.getContrasena(), emptyList());
 	}
 
 	}

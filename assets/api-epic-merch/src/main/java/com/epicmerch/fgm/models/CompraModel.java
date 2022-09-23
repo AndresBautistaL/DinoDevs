@@ -14,6 +14,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name = "compras")
 public class CompraModel {
@@ -33,7 +35,8 @@ public class CompraModel {
     private String estatusEnvio;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")  
+    @JoinColumn(nullable = false, name = "cliente_id")
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY) 
     private ClienteModel clienteCompra;
 
     @ManyToMany

@@ -3,6 +3,7 @@ package com.epicmerch.fgm.controllers;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import com.epicmerch.fgm.models.ClienteModel;
@@ -12,9 +13,17 @@ import com.epicmerch.fgm.services.ClienteService;
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
-
-	@Autowired
-	ClienteService clienteService;
+	
+		
+		//inyeccion por constructor
+	
+		private final ClienteService clienteService;
+		@Autowired
+		private final BCryptPasswordEncoder bCryptPasswordEncoder;
+		public ClienteController(@Autowired ClienteService clienteService, @Autowired BCryptPasswordEncoder bCryptPasswordEncoder) {
+			this.clienteService = clienteService;
+			this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+		}
 	
 	//obtener todos los usuarios
 	@GetMapping() // http://localhost:8080/usuario
@@ -29,6 +38,7 @@ public class ClienteController {
 	
 	@PostMapping()  // http://localhost:8080/usuario
 	public ClienteModel guardarUsuario(@RequestBody ClienteModel usuario){
+		usuario.setContrasena(bCryptPasswordEncoder.encode(usuario.getContrasena()));
         return clienteService.guardarUsuario(usuario);
     }
 

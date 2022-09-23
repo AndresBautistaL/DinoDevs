@@ -2,7 +2,6 @@ package com.epicmerch.fgm.security;
 
 import com.epicmerch.fgm.models.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.epicmerch.fgm.models.*;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,7 +34,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             ClienteModel credentials = new ObjectMapper().readValue(request.getInputStream(), ClienteModel.class);
 
             return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                    credentials.getNombre(), credentials.getContrasena(), new ArrayList<>()));
+                    credentials.getCorreoElectronico(), credentials.getContrasena(), new ArrayList<>()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
