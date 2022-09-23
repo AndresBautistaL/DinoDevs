@@ -10,6 +10,6 @@ public class Constanst {
   // JWT
 
   public static final String ISSUER_INFO = "https://mexico.generation.org/";
-  public static final String SUPER_SECRET_KEY = "bootcamp-cohorte-16";
-  public static final long TOKEN_EXPIRATION_TIME = 864_000_000; // 10 day
+  public static final String SUPER_SECRET_KEY = "epic-merch-2022";
+  public static final long TOKEN_EXPIRATION_TIME = 864_000; // 10 day
 }
